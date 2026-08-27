@@ -1,4 +1,4 @@
-# Commit Convention — Taskly
+# Commit Convention — ADMIN_SOFTWARE
 
 ## Format
 
