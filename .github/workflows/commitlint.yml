@@ -1,0 +1,68 @@
+name: Commitlint
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  commitlint:
+    name: Validate commit messages
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install commitlint
+        run: npm install --global @commitlint/cli
+
+      - name: Create commitlint configuration
+        run: |
+          cat > commitlint.config.cjs <<'EOF'
+          module.exports = {
+            parserPreset: {
+              parserOpts: {
+                headerPattern: /^([a-z][a-z0-9-]*)\(([a-z0-9][a-z0-9-]*)\): (.+)$/,
+                headerCorrespondence: ['type', 'scope', 'subject'],
+              },
+            },
+            plugins: [
+              {
+                rules: {
+                  'valid-taskly-format': ({ raw }) => {
+                    const header = raw.split('\n')[0];
+
+                    const valid =
+                      /^[a-z][a-z0-9-]*\([a-z0-9][a-z0-9-]*\): .+$/.test(header);
+
+                    return [
+                      valid,
+                      'Commit must follow: type(scope): short description',
+                    ];
+                  },
+                },
+              },
+            ],
+            rules: {
+              'valid-taskly-format': [2, 'always'],
+            },
+          };
+          EOF
+
+      - name: Validate commits
+        run: |
+          npx commitlint \
+            --from "${{ github.event.pull_request.base.sha }}" \
+            --to "${{ github.event.pull_request.head.sha }}" \
+            --verbose

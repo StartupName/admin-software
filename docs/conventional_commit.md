@@ -21,8 +21,6 @@ The description is optional
 - `docs`: project documentation.
 - `all`: changes that affect the entire project.
 
-Subscopes are optional. Use them only when they make the affected area clearer.
-
 ## Component Subscopes
 
 - `login`
