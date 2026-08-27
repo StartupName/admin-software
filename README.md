@@ -1,2 +1,2 @@
 # admin-software
-Software de administración pensando para la buena gestión de acciones administrativas en unidades cerradas o públicas. Priorizando la agilidad, la facilidad, la intuitividad y la centralización de procesos.
+Management software designed to effectively handle administrative tasks in gated communities or public facilities, prioritizing agility, ease of use, intuitiveness, and process centralization.
