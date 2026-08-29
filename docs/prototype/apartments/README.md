@@ -1,0 +1,106 @@
+# Strategic Dashboard Breakdown
+
+## Table of Contents
+---
+
+# 1. Objective
+
+This directory contains the reference visual prototype for the **main apartment management interface**.
+
+These images represent an approximation of how the system should look after development and will serve as a guide for tasks created within **GitHub Projects**.
+
+The goal of this documentation is to enable any developer to understand:
+
+* What each section of the interface represents.
+* Which components need to be developed.
+* Which elements should be omitted.
+* Which information will be dynamic.
+* The expected behavior of each component.
+* Developer responsibilities.
+* Responsibilities to be handled later during integration.
+
+> [!IMPORTANT]
+> The images are visual references and do not necessarily represent the system's final behavior.
+>
+> The written instructions in this document take precedence over any elements shown in the prototypes.
+
+---
+
+# 2. Complete Prototype
+
+![Expected final result for the apartment management interface](./apartments.png)
+
+The apartments interface is essential to our client's administrative process; furthermore, it serves as the central hub for managing apartment-related tasks, such as creating, viewing, deleting, and updating data.
+
+---
+
+## 3. Component Principles
+
+Components should be built with a primary focus on:
+
+### Reusability
+
+A component should not be designed exclusively for a single value when it can represent different data via parameters.
+
+### Independence
+
+A visual component should not need to know how the information it displays is obtained.
+
+### Configuration via Props
+
+Whenever possible, reusable components should receive the information needed for rendering via `props`.
+
+### Separation of Concerns
+
+The component's primary responsibility will be to **render information and visual behavior**.
+
+Data fetching, transformation, and integration will be handled in higher-level layers where appropriate.
+
+---
+
+# 4. Filters Component
+
+![Filters Section](./filtersComponent.png)
+
+This component represents a key section of the table of contents.
+
+Certain elements in this prototype should not be rendered, as they do not align with the software requirements:
+
+* `Torre/Bloque` and its corresponding input
+* `Estado de ocupación` and its corresponding input
+* `Más filtros` and its corresponding input
+
+Instead, the elements that *should* be included are those not excluded above, plus the following:
+
+* `Piso` and its corresponding input
+* `Aplicar` and its corresponding button.
+
+[`Piso` refers to the building's floors]
+
+The default data displayed in these inputs will initially be provided via test data; subsequently, this will be replaced by real data from the server.
+
+Clicking the `Aplicar` button triggers the proposed filters; this specific action must also execute the function that queries the database.
+
+The `Limpiar` button must be functional, resetting all inputs to `Todos` and thereby removing the filters. The aforementioned function must be executed again, but this time with a parameter indicating that the filters have been cleared, ensuring the query returns all records.
+
+# 5. Navigation Component
+
+![Navigation](./navigationComponent.jpg)
+
+This section will be handled exclusively by reviewers or developers—and only if we are in the backend stage.
+
+To achieve the prototype's objective, it is necessary to implement only what is shown in the image; do not add extra logic—include only what appears on the screen.
+
+Remember to make the navigation component flexible.
+
+> [!IMPORTANT]
+> It does not need to be reusable.
+> It will be designed solely as a frontend; everything will be static.
+
+# 6. Summary Component
+
+![Summary Component](./summaryComponent.jpg)
+
+Everything must look exactly as it does in the image; however, the numerical values ​​representing the statistics must be passed via `props` or variables when querying the database.
+
+The "Register Apartment" button should not be functional yet; simply style its active and hover states.
