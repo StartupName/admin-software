@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import './App.css'
+import TopNavigationComponent from './components/topNavigationComponent/topNavigationComponent'
 
-function App() {}
+function App(){ return <TopNavigationComponent organizationName="Altos del Parque" /> }
 
 export default App
