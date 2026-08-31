@@ -1,62 +1,56 @@
-/* Barra superior blanca que contiene todo - flex para alinear a la derecha con espacio entre elementos */
 .topBar {
-  display: flex; /* pone lupa, campana y organización en fila */
-  align-items: center; /* centra verticalmente */
-  justify-content: flex-end; /* los manda todos a la derecha */
-  gap: 16px; /* separación entre cada elemento */
-  padding: 12px 24px; /* aire interno */
-  background: #fff; /* fondo blanco */
-  border-bottom: 1px solid #e5e7eb; /* línea gris abajo */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  padding: 12px 24px;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-/* Caja del buscador con icono + input */
 .searchBox {
   display: flex;
   align-items: center;
-  gap: 8px; /* espacio entre lupa e input */
-  background: #f9fafb; /* gris muy claro */
-  border: 1px solid #e5e7eb; /* borde gris */
-  border-radius: 8px; /* esquinas redondeadas */
+  gap: 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   padding: 8px 12px;
-  width: 280px; /* ancho fijo */
+  width: 280px;
 }
 
-/* El input dentro del buscador - sin bordes para que se vea limpio */
 .searchBox input {
-  border: none; /* quita borde feo */
-  outline: none; /* quita borde azul al hacer clic */
-  background: transparent; /* hereda el gris de searchBox */
-  width: 100%; /* ocupa todo el espacio */
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
   font-size: 14px;
 }
 
-/* Botón de campana */
 .notifBtn {
-  position: relative; /* necesario para que el badge se posicione sobre él */
+  position: relative;
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   padding: 8px 10px;
-  cursor: pointer; /* manito al pasar mouse */
+  cursor: pointer;
 }
 
-/* Bolita roja con el número 3 sobre la campana */
 .badge {
-  position: absolute; /* flota sobre el botón */
-  top: -6px; /* sale por arriba */
-  right: -6px; /* sale por la derecha */
-  background: #ef4444; /* rojo */
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ef4444;
   color: white;
   font-size: 10px;
   width: 16px;
   height: 16px;
-  border-radius: 50%; /* círculo perfecto */
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: center; /* centra el 3 */
+  justify-content: center;
 }
 
-/* Selector de organización: icono edificio + nombre + flecha */
 .orgSelector {
   display: flex;
   align-items: center;
@@ -66,11 +60,10 @@
   border-radius: 8px;
   padding: 8px 12px;
   cursor: pointer;
-  font-weight: 500; /* texto un poco negrita */
+  font-weight: 500;
   font-size: 14px;
 }
 
-/* Responsive: en móvil se apila y el buscador ocupa 100% */
 @media (max-width: 768px) {
   .topBar { flex-wrap: wrap; gap: 8px; }
   .searchBox { width: 100%; order: 3; }
