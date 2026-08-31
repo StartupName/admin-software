@@ -1,6 +1,3 @@
-import { useState } from 'react'
-import './App.css'
-
-function App() {}
-
+import ChartsComponent from './components/ChartsComponent/ChartsComponent'
+function App(){ return <ChartsComponent /> }
 export default App

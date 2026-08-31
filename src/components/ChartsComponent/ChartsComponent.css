@@ -1,1 +1,41 @@
-/*Write your code here*/
+.chartsGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  padding:16px;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box
+}
+
+.chartCard{
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:16px;
+  min-width:0; 
+  overflow:hidden;
+  width:100%;
+  box-sizing:border-box
+}
+
+.pieLegend li{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:8px;
+  line-height:1.4
+}
+.pieLegend li span{
+  margin-left:4px
+}
+
+.chartHeader{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.chartHeader select{border:1px solid #e5e7eb;border-radius:6px;padding:4px 8px;font-size:12px}
+.legend{display:flex;gap:16px;justify-content:center;margin-top:8px;font-size:12px;flex-wrap:wrap}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.dot.green{background:#22c55e}.dot.blue{background:#2563eb}.dot.yellow{background:#eab308}.dot.red{background:#ef4444}
+.pieRow{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.pieLegend{list-style:none;padding:0;font-size:13px}
+.pieLegend span{color:#6b7280}
+@media(max-width:768px){.chartsGrid{grid-template-columns:1fr}}
