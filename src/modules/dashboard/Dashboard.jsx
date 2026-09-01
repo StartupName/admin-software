@@ -1,9 +1,9 @@
 import './Dashboard.css'
-
+import InformationCardsComponent from './components/InformationCardsComponent/InformationCardsComponent'
 function DashBoard() {
     return (
         <>
-            Put your components here
+            <InformationCardsComponent/>
         </>
     )
 }
