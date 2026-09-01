@@ -1,0 +1,7 @@
+[
+  { "name": "1 Ago", "ing": 2, "gas": 1 },
+  { "name": "8 Ago", "ing": 12, "gas": 8 },
+  { "name": "15 Ago", "ing": 16, "gas": 12 },
+  { "name": "22 Ago", "ing": 26, "gas": 18 },
+  { "name": "31 Ago", "ing": 33, "gas": 25 }
+]

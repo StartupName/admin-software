@@ -1,1 +1,150 @@
-/*Write your code here*/
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.chartCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.chartHeader select {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.chartContainer {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+
+.centerLabel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centerLabel span {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.centerLabel small {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.legend {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 8px;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.green {
+  background: #22c55e;
+}
+
+.dot.blue {
+  background: #2563eb;
+}
+
+.dot.yellow {
+  background: #eab308;
+}
+
+.dot.red {
+  background: #ef4444;
+}
+
+.donutWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.legend-right {
+  flex-direction: row;
+}
+
+.legend-left {
+  flex-direction: row-reverse;
+}
+
+.legend-top {
+  flex-direction: column;
+}
+
+.legend-bottom {
+  flex-direction: column-reverse;
+}
+
+.pieLegend {
+  list-style: none;
+  padding: 0;
+  font-size: 13px;
+}
+
+.pieLegend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.pieLegend li span {
+  margin-left: 4px;
+  color: #6b7280;
+}
+
+@media (max-width: 1024px) {
+  .chartsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .chartsGrid {
+    grid-template-columns: 1fr;
+  }
+}
