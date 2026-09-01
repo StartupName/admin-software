@@ -12,7 +12,11 @@
   "dependencies": {
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+<<<<<<< HEAD
     "react-router-dom": "^7.18.3"
+=======
+    "react-icons": "^5.7.0"
+>>>>>>> 881f328 (feat(component-top-navigation): implement top navigation)
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",

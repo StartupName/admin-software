@@ -1,11 +1,12 @@
 import './Dashboard.css'
+import TopNavigationComponent from './components/topNavigationComponent/topNavigationComponent'
 
 function DashBoard() {
-    return (
-        <>
-            Put your components here
-        </>
-    )
+  return (
+    <>
+      <TopNavigationComponent organizationName="Altos del Parque" />
+    </>
+  )
 }
 
 export default DashBoard
