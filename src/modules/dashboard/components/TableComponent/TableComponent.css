@@ -1,1 +1,197 @@
-/* Write your code here */
+
+.tc-card {
+  background: #ebe8e8;
+  border: 1px solid #eef0f3;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  padding: 20px 24px 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  color: #1f2937;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- Header ---------- */
+
+.tc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.tc-header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tc-header-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+}
+
+.tc-header-icon {
+  display: block;
+}
+
+.tc-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.tc-action-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.tc-action-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Table ---------- */
+
+.tc-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tc-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.tc-th {
+  text-align: left;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #6b7280;
+  padding: 10px 12px;
+  border-top: 1px solid #eef0f3;
+  border-bottom: 1px solid #eef0f3;
+  background: #fafafa;
+  white-space: nowrap;
+}
+
+.tc-th:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.tc-th:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.tc-tr {
+  border-bottom: 1px solid #f1f2f4;
+}
+
+.tc-tr:last-child {
+  border-bottom: none;
+}
+
+.tc-td {
+  padding: 14px 12px;
+  font-size: 13.5px;
+  color: #374151;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.tc-align-left {
+  text-align: left;
+}
+
+.tc-align-center {
+  text-align: center;
+}
+
+.tc-align-right {
+  text-align: right;
+}
+
+.tc-empty {
+  text-align: center;
+  padding: 32px 12px;
+  color: #9ca3af;
+  font-size: 13.5px;
+}
+
+/* ---------- Badge (uso opcional, vía render de columna) ---------- */
+
+.tc-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.tc-badge--green {
+  background: #e7f6ec;
+  color: #1a8245;
+}
+
+.tc-badge--blue {
+  background: #e8f0fe;
+  color: #2563eb;
+}
+
+.tc-badge--orange {
+  background: #fdf3e0;
+  color: #b7791f;
+}
+
+.tc-badge--red {
+  background: #fdecec;
+  color: #c0392b;
+}
+
+.tc-badge--gray {
+  background: #f0f1f3;
+  color: #4b5563;
+}
+
+/* ---------- Utilidades de apoyo para ejemplos (comprobante/descarga) ---------- */
+
+.tc-comprobante {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tc-download-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .tc-card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .tc-title {
+    font-size: 14.5px;
+  }
+}
