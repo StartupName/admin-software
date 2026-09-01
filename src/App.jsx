@@ -1,15 +1,39 @@
-import { useState } from 'react'
+import { 
+    Outlet,
+    BrowserRouter,
+    Routes,
+    Route
+} from 'react-router-dom'
 
 import './App.css'
 import SideMenu from './modules/sidemenu/SideMenu'
 import DashBoard from './modules/dashboard/Dashboard'
 
-function App() {
+
+function Layout(){
     return (
         <>
-            <SideMenu />
-            <DashBoard />
+            <nav className="nav">
+                <SideMenu />
+            </nav>
+            <main className="main">
+                <Outlet />
+            </main>
         </>
+    )
+}
+
+
+function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<DashBoard />} />
+                    <Route path="dashboard" element={<DashBoard />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
     )
 }
 
