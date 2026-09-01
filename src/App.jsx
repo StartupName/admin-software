@@ -8,6 +8,7 @@ import {
 import './App.css'
 import SideMenu from './modules/sidemenu/SideMenu'
 import DashBoard from './modules/dashboard/Dashboard'
+import Apartments from './modules/apartments/Apartments'
 
 
 function Layout(){
@@ -31,6 +32,7 @@ function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<>Home</>} />
                     <Route path="dashboard" element={<DashBoard />} />
+                    <Route path="apartments" element={<Apartments />} />
                 </Route>
             </Routes>
         </BrowserRouter>
