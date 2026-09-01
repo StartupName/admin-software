@@ -1,4 +1,4 @@
-import 'apartments.css';
+import './Apartments.css';
 
 function Apartments() {
   return (
@@ -7,7 +7,5 @@ function Apartments() {
     </>
   );
 }
-
-export default Apartments;
 
 export default Apartments;
