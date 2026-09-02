@@ -11,7 +11,7 @@ export default function ApartmentStatusDonut({ data, legendPosition = "right", s
             <Pie
               data={data}
               dataKey="value"
-              innerRadius={68}
+              innerRadius={62}
               outerRadius={82}
             >
               {data.map((entry, index) => (
