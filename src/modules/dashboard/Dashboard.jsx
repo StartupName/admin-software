@@ -1,4 +1,6 @@
 import TableComponent from './components/TableComponent/TableComponent'
+import QuickActionsComponent, { defaultQuickActions } from './components/QuickActionsComponent/QuickActionsComponent'
+import './Dashboard.css'
 import TopNavigationComponent from './components/topNavigationComponent/topNavigationComponent'
 import InformationCardsComponent from './components/InformationCardsComponent/InformationCardsComponent'
 import ChartsComponent from './components/ChartsComponent/ChartsComponent'
@@ -9,7 +11,6 @@ import { ArrowDownToLine, FileText } from 'lucide-react'
 import './Dashboard.css'
 
 function DashBoard() {
-
   function download(){
     alert('Descargando archivo...')
   }
@@ -65,6 +66,7 @@ function DashBoard() {
       <div className="dashboard_table">
         <TableComponent icon = {<FileText/>} title={"Último pagos registrados"} columns={columns} data={defaultData} />
       </div>
+      <QuickActionsComponent actions={defaultQuickActions} />
     </>
   )
 }

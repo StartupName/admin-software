@@ -1,1 +1,77 @@
-/* Write your code here */
+.quick-actions-container {
+  width: 100%;
+  max-width: 640px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.quick-actions-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e1e2d;
+}
+
+.quick-actions-bolt {
+  font-size: 16px;
+}
+
+/* Flexbox grid: wraps naturally to fit 1 to 6 cards, 3 per row */
+.quick-actions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.quick-action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex: 1 1 calc(33.333% - 16px);
+  min-width: 140px;
+  padding: 24px 12px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.quick-action-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.quick-action-card:active {
+  transform: translateY(0);
+}
+
+.quick-action-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.quick-action-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e1e2d;
+  text-align: center;
+}
+
+/* Responsive: stack 2 per row on smaller screens */
+@media (max-width: 480px) {
+  .quick-action-card {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
