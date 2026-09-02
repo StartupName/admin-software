@@ -1,5 +1,6 @@
 import TableComponent from './components/TableComponent/TableComponent'
 import QuickActionsComponent, { defaultQuickActions } from './components/QuickActionsComponent/QuickActionsComponent'
+import { defaultQuickActions } from './components/QuickActionsComponent/defaultQuickActions'
 import './Dashboard.css'
 import TopNavigationComponent from './components/topNavigationComponent/topNavigationComponent'
 import InformationCardsComponent from './components/InformationCardsComponent/InformationCardsComponent'

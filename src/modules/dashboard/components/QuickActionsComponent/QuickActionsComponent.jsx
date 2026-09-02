@@ -1,4 +1,3 @@
-import { DollarSign, FileText, Building2 } from 'lucide-react';
 import './QuickActionsComponent.css';
 
 /**
@@ -26,7 +25,7 @@ function QuickActionCard({ icon: Icon, title, color }) {
           backgroundColor: `${color}26`, // lighter circle behind the icon
         }}
       >
-        {Icon && <Icon size={26} color={color} strokeWidth={2} />}
+        {Icon && <Icon size={20} color={color} strokeWidth={2} />}
       </span>
       <span className="quick-action-title">{title}</span>
     </button>
@@ -74,21 +73,3 @@ export default function QuickActionsComponent({ actions = [] }) {
     </div>
   );
 }
-
-/**
- * Example usage (as required in the task, only these 3 actions are included
- * initially: Register Payment, Register Expense and Apartments).
- *
- * const actions = [
- *   { id: 1, title: 'Register Payment', icon: DollarSign, color: '#22C55E' },
- *   { id: 2, title: 'Register Expense', icon: FileText,   color: '#3B82F6' },
- *   { id: 3, title: 'Apartments',       icon: Building2,  color: '#8B5CF6' },
- * ];
- *
- * <QuickActionsComponent actions={actions} />
- */
-export const defaultQuickActions = [
-  { id: 1, title: 'Resgistrar pago', icon: DollarSign, color: '#22C55E' },
-  { id: 2, title: 'Registrar gastos', icon: FileText, color: '#3B82F6' },
-  { id: 3, title: 'Apartamentos', icon: Building2, color: '#8B5CF6' },
-];
