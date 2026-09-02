@@ -1,1 +1,90 @@
-/*Write your code here*/
+.apartments-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 20px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.apartments-nav__info {
+  margin: 0;
+  color: #6b7280;
+}
+
+.apartments-nav__controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.apartments-nav__page-size {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.apartments-nav__page-size select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 8px 32px 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #374151;
+  font-size: 13px;
+}
+
+.apartments-nav__page-size svg {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+  color: #6b7280;
+}
+
+.apartments-nav__pages {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.apartments-nav__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #374151;
+  font-size: 14px;
+  cursor: default;
+}
+
+.apartments-nav__btn--active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .apartments-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .apartments-nav__controls {
+    width: 100%;
+  }
+
+  .apartments-nav__pages {
+    flex-wrap: wrap;
+  }
+}
