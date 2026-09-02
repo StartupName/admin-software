@@ -1,9 +1,18 @@
 import './Apartments.css';
+import FiltersComponent from './components/FiltersComponent/FiltersComponent';
 
 function Apartments() {
+  function queryApartments(filters) {
+    console.log(filters)
+  }
+
   return (
     <>
-        Put your apartments component code here
+      <FiltersComponent
+        financialStatuses={['Al día', 'Pendiente', 'En mora']}
+        floors={[1, 2, 3]}
+        onQuery={queryApartments}
+      />
     </>
   );
 }
