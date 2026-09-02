@@ -1,4 +1,4 @@
-import PaymentsTableExample from './components/TableComponent/PaymentsTableExample'
+import TransactionsTableExample from './components/TableComponent/TransactionsTableExample'
 import './Dashboard.css'
 import TopNavigationComponent from './components/topNavigationComponent/topNavigationComponent'
 import InformationCardsComponent from './components/InformationCardsComponent/InformationCardsComponent'
@@ -11,7 +11,7 @@ function DashBoard() {
       <TopNavigationComponent organizationName="Altos del Parque" />
       <InformationCardsComponent/>
       <ChartsComponent />
-      <PaymentsTableExample/>
+      <TransactionsTableExample/>
     </>
   )
 }

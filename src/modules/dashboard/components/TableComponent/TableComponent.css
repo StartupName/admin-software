@@ -1,10 +1,3 @@
-/* ==========================================================
-   TableComponent styles
-   Fully generic: no dependency on any specific business domain.
-   Class names follow a descriptive BEM-like convention so the
-   purpose of each rule is clear at a glance.
-   ========================================================== */
-
 .table-component {
   background: #ffffff;
   border: 1px solid #eef0f3;
@@ -18,30 +11,10 @@
   box-sizing: border-box;
 }
 
-/* ---------- Header ---------- */
-
 .table-component__header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-bottom: 12px;
-}
-
-.table-component__heading-group {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.table-component__icon-wrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: #6b7280;
-}
-
-.table-component__icon {
-  display: block;
 }
 
 .table-component__title {
@@ -50,22 +23,6 @@
   color: #111827;
   margin: 0;
 }
-
-.table-component__action-button {
-  background: none;
-  border: none;
-  padding: 0;
-  color: #2563eb;
-  font-size: 13px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.table-component__action-button:hover {
-  text-decoration: underline;
-}
-
-/* ---------- Table ---------- */
 
 .table-component__scroll-container {
   width: 100%;
@@ -123,22 +80,6 @@
   font-size: 13.5px;
 }
 
-/* ---------- Reusable text alignment utilities ---------- */
-
-.text-align-left {
-  text-align: left;
-}
-
-.text-align-center {
-  text-align: center;
-}
-
-.text-align-right {
-  text-align: right;
-}
-
-/* ---------- StatusBadge (optional, used via a column's render function) ---------- */
-
 .status-badge {
   display: inline-block;
   padding: 4px 10px;
@@ -172,27 +113,6 @@
   background: #f0f1f3;
   color: #4b5563;
 }
-
-/* ---------- Optional helper used by consumers for actionable cells
-   (e.g. a receipt column with a download button) ---------- */
-
-.table-component__cell-with-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.table-component__cell-action-button {
-  background: none;
-  border: none;
-  padding: 0;
-  color: #2563eb;
-  cursor: pointer;
-  font-size: 13px;
-  line-height: 1;
-}
-
-/* ---------- Responsive ---------- */
 
 @media (max-width: 640px) {
   .table-component {
