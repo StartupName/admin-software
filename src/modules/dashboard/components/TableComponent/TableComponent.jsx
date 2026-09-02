@@ -1,4 +1,5 @@
 import "./TableComponent.css";
+import defaultData from "./data/data_table.json";
 
 export function StatusBadge({ label, variant = "neutral" }) {
   return (
@@ -8,23 +9,36 @@ export function StatusBadge({ label, variant = "neutral" }) {
   );
 }
 
+function buildDefaultColumnsFromData(data) {
+  if (!data || data.length === 0) return [];
+  const first = data[0];
+  return Object.keys(first).map((key) => ({
+    key,
+    header: key.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+  }));
+}
+
 export default function TableComponent({
+  icon,
   title,
   columns = [],
-  data = [],
+  data = null,
   emptyMessage = "No hay registros para mostrar",
 }) {
+  const finalData = Array.isArray(data) && data.length > 0 ? data : defaultData;
+  const finalColumns = (columns && columns.length > 0) ? columns : buildDefaultColumnsFromData(finalData);
+
   return (
     <div className="table-component">
       <div className="table-component__header">
-        <h2 className="table-component__title">{title}</h2>
+        <h2 className="table-component__title">{icon} {title}</h2>
       </div>
 
       <div className="table-component__scroll-container">
         <table className="table-component__table">
           <thead>
             <tr>
-              {columns.map((column) => (
+              {finalColumns.map((column) => (
                 <th key={column.key} className="table-component__header-cell">
                   {column.header}
                 </th>
@@ -32,25 +46,30 @@ export default function TableComponent({
             </tr>
           </thead>
           <tbody>
-            {data.length === 0 ? (
+            {finalData.length === 0 ? (
               <tr>
                 <td
                   className="table-component__empty-message"
-                  colSpan={columns.length || 1}
+                  colSpan={finalColumns.length || 1}
                 >
                   {emptyMessage}
                 </td>
               </tr>
             ) : (
-              data.map((row, rowIndex) => (
+              finalData.map((row, rowIndex) => (
                 <tr
                   key={row.id ?? rowIndex}
                   className="table-component__body-row"
                 >
-                  {columns.map((column) => {
+                  {finalColumns.map((column) => {
                     const cellValue = row?.[column.key];
+                    const headerLabel = column.header || column.key;
                     return (
-                      <td key={column.key} className="table-component__body-cell">
+                      <td
+                        key={column.key}
+                        className="table-component__body-cell"
+                        data-label={headerLabel}
+                      >
                         {column.render
                           ? column.render(cellValue, row, rowIndex)
                           : cellValue}

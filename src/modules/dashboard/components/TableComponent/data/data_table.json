@@ -1,0 +1,122 @@
+[
+  {
+    "fecha": "23/08/2024",
+    "apartamento": "Apto 304",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Transferencia",
+    "comprobante": "C-12458"
+  },
+  {
+    "fecha": "23/08/2024",
+    "apartamento": "Apto 201",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Efectivo",
+    "comprobante": "C-12457"
+  },
+  {
+    "fecha": "22/08/2024",
+    "apartamento": "Apto 502",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Transferencia",
+    "comprobante": "C-12456"
+  },
+  {
+    "fecha": "22/08/2024",
+    "apartamento": "Apto 101",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Efectivo",
+    "comprobante": "C-12455"
+  },
+  {
+    "fecha": "21/08/2024",
+    "apartamento": "Apto 403",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Transferencia",
+    "comprobante": "C-12454"
+  },
+  {
+    "fecha": "21/08/2024",
+    "apartamento": "Apto 205",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "PSE",
+    "comprobante": "C-12453"
+  },
+  {
+    "fecha": "20/08/2024",
+    "apartamento": "Apto 602",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Transferencia",
+    "comprobante": "C-12452"
+  },
+  {
+    "fecha": "20/08/2024",
+    "apartamento": "Apto 401",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "PSE",
+    "comprobante": "C-12451"
+  },
+  {
+    "fecha": "19/08/2024",
+    "apartamento": "Apto 305",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Efectivo",
+    "comprobante": "C-12450"
+  },
+  {
+    "fecha": "19/08/2024",
+    "apartamento": "Apto 701",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Transferencia",
+    "comprobante": "C-12449"
+  },
+  {
+    "fecha": "18/08/2024",
+    "apartamento": "Apto 202",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "PSE",
+    "comprobante": "C-12448"
+  },
+  {
+    "fecha": "17/08/2024",
+    "apartamento": "Apto 504",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Transferencia",
+    "comprobante": "C-12447"
+  },
+  {
+    "fecha": "16/08/2024",
+    "apartamento": "Apto 801",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Efectivo",
+    "comprobante": "C-12446"
+  },
+  {
+    "fecha": "15/08/2024",
+    "apartamento": "Apto 102",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "PSE",
+    "comprobante": "C-12445"
+  },
+  {
+    "fecha": "14/08/2024",
+    "apartamento": "Apto 603",
+    "concepto": "Administración Agosto",
+    "valor": "$ 350.000",
+    "metodo": "Transferencia",
+    "comprobante": "C-12444"
+  }
+]
