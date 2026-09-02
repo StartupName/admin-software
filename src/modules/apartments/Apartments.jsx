@@ -1,9 +1,10 @@
 import './Apartments.css';
+import NavigationComponent from './components/NavigationComponent/NavigationComponent';
 
 function Apartments() {
   return (
     <>
-        Put your apartments component code here
+      <NavigationComponent />
     </>
   );
 }
