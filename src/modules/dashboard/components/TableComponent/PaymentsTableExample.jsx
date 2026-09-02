@@ -1,96 +1,99 @@
-import TableComponent, { Badge } from "./TableComponent";
+import TableComponent, { StatusBadge } from "./TableComponent";
 
 /**
- * Este archivo es solo un EJEMPLO de consumo de <TableComponent />.
- * Aquí sí viven los datos de prueba y la lógica específica de este
- * módulo (pagos): colores de los badges, columnas a mostrar, etc.
- * Cuando exista backend real, `paymentsData` se reemplaza por la
- * respuesta de la API y el resto del código queda igual.
+ * This file is only an EXAMPLE of how to consume <TableComponent />.
+ * All domain-specific logic (mock data, badge variants per payment
+ * method, column definitions) lives here — NOT inside TableComponent.
+ * When a real backend is available, `paymentRecords` is simply
+ * replaced by the API response and the rest of the code stays the same.
  */
 
-const methodColor = {
-  Transferencia: "green",
-  PSE: "blue",
-  Efectivo: "orange",
+const paymentMethodVariant = {
+  Transferencia: "success",
+  PSE: "info",
+  Efectivo: "warning",
 };
 
-const paymentsData = [
+const paymentRecords = [
   {
     id: 1,
-    fecha: "23/08/2024",
-    apartamento: "Apto 304",
-    residente: "María Fernanda López",
-    concepto: "Administración Agosto",
-    valor: "$ 350.000",
-    metodo: "Transferencia",
-    comprobante: "C-12458",
+    date: "23/08/2024",
+    apartment: "Apto 304",
+    resident: "María Fernanda López",
+    concept: "Administración Agosto",
+    amount: "$ 350.000",
+    method: "Transferencia",
+    receiptNumber: "C-12458",
   },
   {
     id: 2,
-    fecha: "23/08/2024",
-    apartamento: "Apto 201",
-    residente: "Carlos Andrés Ruiz",
-    concepto: "Administración Agosto",
-    valor: "$ 350.000",
-    metodo: "PSE",
-    comprobante: "C-12457",
+    date: "23/08/2024",
+    apartment: "Apto 201",
+    resident: "Carlos Andrés Ruiz",
+    concept: "Administración Agosto",
+    amount: "$ 350.000",
+    method: "PSE",
+    receiptNumber: "C-12457",
   },
   {
     id: 3,
-    fecha: "22/08/2024",
-    apartamento: "Apto 502",
-    residente: "Juliana Torres",
-    concepto: "Administración Agosto",
-    valor: "$ 350.000",
-    metodo: "Transferencia",
-    comprobante: "C-12456",
+    date: "22/08/2024",
+    apartment: "Apto 502",
+    resident: "Juliana Torres",
+    concept: "Administración Agosto",
+    amount: "$ 350.000",
+    method: "Transferencia",
+    receiptNumber: "C-12456",
   },
   {
     id: 4,
-    fecha: "22/08/2024",
-    apartamento: "Apto 101",
-    residente: "Diego Alejandro Vargas",
-    concepto: "Administración Agosto",
-    valor: "$ 350.000",
-    metodo: "Efectivo",
-    comprobante: "C-12455",
+    date: "22/08/2024",
+    apartment: "Apto 101",
+    resident: "Diego Alejandro Vargas",
+    concept: "Administración Agosto",
+    amount: "$ 350.000",
+    method: "Efectivo",
+    receiptNumber: "C-12455",
   },
   {
     id: 5,
-    fecha: "21/08/2024",
-    apartamento: "Apto 403",
-    residente: "Ana Sofía Gómez",
-    concepto: "Administración Agosto",
-    valor: "$ 350.000",
-    metodo: "Transferencia",
-    comprobante: "C-12454",
+    date: "21/08/2024",
+    apartment: "Apto 403",
+    resident: "Ana Sofía Gómez",
+    concept: "Administración Agosto",
+    amount: "$ 350.000",
+    method: "Transferencia",
+    receiptNumber: "C-12454",
   },
 ];
 
-const paymentsColumns = [
-  { key: "fecha", header: "Fecha" },
-  { key: "apartamento", header: "Apartamento" },
-  { key: "residente", header: "Residente" },
-  { key: "concepto", header: "Concepto" },
-  { key: "valor", header: "Valor" },
+const paymentColumns = [
+  { key: "date", header: "Fecha" },
+  { key: "apartment", header: "Apartamento" },
+  { key: "resident", header: "Residente" },
+  { key: "concept", header: "Concepto" },
+  { key: "amount", header: "Valor" },
   {
-    key: "metodo",
+    key: "method",
     header: "Método",
     render: (value) => (
-      <Badge text={value} color={methodColor[value] || "gray"} />
+      <StatusBadge
+        label={value}
+        variant={paymentMethodVariant[value] || "neutral"}
+      />
     ),
   },
   {
-    key: "comprobante",
+    key: "receiptNumber",
     header: "Comprobante",
     render: (value) => (
-      <span className="tc-comprobante">
+      <span className="table-component__cell-with-action">
         {value}{" "}
         <button
           type="button"
-          className="tc-download-btn"
-          onClick={() => alert(`Descargando ${value}`)}
-          aria-label={`Descargar comprobante ${value}`}
+          className="table-component__cell-action-button"
+          onClick={() => alert(`Downloading ${value}`)}
+          aria-label={`Download receipt ${value}`}
         >
           ⬇
         </button>
@@ -104,31 +107,34 @@ export default function PaymentsTableExample() {
     <TableComponent
       title="Últimos pagos registrados"
       actionLabel="Ver todos"
-      onActionClick={() => console.log("Ver todos clickeado")}
-      columns={paymentsColumns}
-      data={paymentsData}
+      onActionClick={() => console.log("View all clicked")}
+      columns={paymentColumns}
+      data={paymentRecords}
     />
   );
 }
 
 /**
- * Otro ejemplo, con datos y columnas COMPLETAMENTE distintas,
- * para demostrar que el mismo <TableComponent /> sirve para
- * cualquier módulo sin tocar su código interno.
+ * A second example with a completely different dataset and columns,
+ * demonstrating that the same <TableComponent /> works for any module
+ * without touching its internal code.
  */
-const usersData = [
-  { id: 1, nombre: "Laura Ramírez", rol: "Administrador", estado: "Activo" },
-  { id: 2, nombre: "Pedro Martínez", rol: "Vigilante", estado: "Inactivo" },
+const userRecords = [
+  { id: 1, name: "Laura Ramírez", role: "Administrador", status: "Activo" },
+  { id: 2, name: "Pedro Martínez", role: "Vigilante", status: "Inactivo" },
 ];
 
-const usersColumns = [
-  { key: "nombre", header: "Nombre" },
-  { key: "rol", header: "Rol" },
+const userColumns = [
+  { key: "name", header: "Nombre" },
+  { key: "role", header: "Rol" },
   {
-    key: "estado",
+    key: "status",
     header: "Estado",
     render: (value) => (
-      <Badge text={value} color={value === "Activo" ? "green" : "red"} />
+      <StatusBadge
+        label={value}
+        variant={value === "Activo" ? "success" : "danger"}
+      />
     ),
   },
 ];
@@ -138,8 +144,8 @@ export function UsersTableExample() {
     <TableComponent
       title="Usuarios del sistema"
       actionLabel={null}
-      columns={usersColumns}
-      data={usersData}
+      columns={userColumns}
+      data={userRecords}
     />
   );
 }
