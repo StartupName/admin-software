@@ -113,10 +113,23 @@
   background: #ef4444;
 }
 
+.donutCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.donutTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #0f172a;
+}
+
 .donutWrapper {
   display: flex;
   gap: 16px;
   align-items: center;
+  flex: 1;
 }
 
 .legend-right {
@@ -158,24 +171,58 @@
   margin-bottom: 0;
 }
 
+.donutLink {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.donutLink span {
+  font-size: 14px;
+}
+
 .pieLegend {
   list-style: none;
   padding: 0;
   margin: 0;
   font-size: 12px;
+  min-width: 110px;
 }
 
 .pieLegend li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 8px;
-  margin-bottom: 8px;
-  line-height: 1.4;
+  margin-bottom: 12px;
+  line-height: 1.3;
 }
 
-.pieLegend li span {
-  margin-left: 4px;
-  color: #6b7280;
+.pieLegend li:last-child {
+  margin-bottom: 0;
+}
+
+.pieLegendText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pieLegendText strong {
+  font-size: 12px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.pieLegendText span {
+  font-size: 12px;
+  color: #64748b;
 }
 
 @media (max-width: 1024px) {
