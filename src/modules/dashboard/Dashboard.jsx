@@ -1,7 +1,6 @@
+import './Dashboard.css'
 import TableComponent from './components/TableComponent/TableComponent'
 import QuickActionsComponent, { defaultQuickActions } from './components/QuickActionsComponent/QuickActionsComponent'
-import { defaultQuickActions } from './components/QuickActionsComponent/defaultQuickActions'
-import './Dashboard.css'
 import TopNavigationComponent from './components/topNavigationComponent/topNavigationComponent'
 import InformationCardsComponent from './components/InformationCardsComponent/InformationCardsComponent'
 import ChartsComponent from './components/ChartsComponent/ChartsComponent'
@@ -65,9 +64,9 @@ function DashBoard() {
       <InformationCardsComponent/>
       <ChartsComponent />
       <div className="dashboard_table">
-        <TableComponent icon = {<FileText/>} title={"Último pagos registrados"} columns={columns} data={defaultData} />
+        <TableComponent icon = {<FileText/>} title={"Último pagos registrados"} columns={columns} data={defaultData} className="table"/>
+        <QuickActionsComponent actions={defaultQuickActions} className="quick-actions"/>
       </div>
-      <QuickActionsComponent actions={defaultQuickActions} />
     </>
   )
 }
