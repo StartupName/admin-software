@@ -4,27 +4,24 @@ Use this template when closing a Pull Request to document its final state, the r
 
 ---
 ---
+```text
+  ## Closure Summary
 
-## Closure Summary
+  * **Status:** `[STATUS]`
+  * **Reason:** `[REASON]`
+  * **Related Issue:** `#[ISSUE_NUMBER]`
+  * **Replacement PR:** `#[PR_NUMBER]`
 
-* **Status:** `[STATUS]`
-* **Reason:** `[REASON]`
-* **Related Issue:** `#[ISSUE_NUMBER]`
-* **Replacement PR:** `#[PR_NUMBER]`
+  ## Details
 
-## Details
+  [Provide a clear explanation of why the Pull Request is being closed, including relevant technical or project context.]
 
-[Provide a clear explanation of why the Pull Request is being closed, including relevant technical or project context.]
+  ## Next Steps
 
-## Next Steps
+  Describe any actions that must be taken after closing the Pull Request.
 
-Describe any actions that must be taken after closing the Pull Request.
-
----
-
-## Status
-
-Indicates the final state or outcome of the Pull Request.
+  ---
+```
 
 ### Allowed values
 
@@ -36,7 +33,7 @@ Indicates the final state or outcome of the Pull Request.
 * **`Closed without merging`**
 
   * The Pull Request was closed and none of its changes were merged.
-  * Use this as the general status when a more specific status does not apply.
+  * The brach related was deleted or the work most be abandoned, the changes will not be incorporated into the target branch.
 
 * **`Rejected`**
 
@@ -60,8 +57,8 @@ Indicates the final state or outcome of the Pull Request.
 
 * **`Needs rework`**
 
-  * The current implementation requires substantial changes and should not continue in its current Pull Request.
-  * Use when the work will be redesigned or implemented again in a new Pull Request.
+  * The pull request requires corrections and will be closed solely for repository cleanup.
+  * It must be reopened—without creating a new branch—right before pushing from the local environment.
 ---
 
 ## Related Issue
@@ -73,14 +70,6 @@ References the Issue associated with the work performed in the Pull Request.
 ## Replacement PR
 
 References another Pull Request that replaces or supersedes the current one.
-
-### Guidelines
-
-This field should normally contain a Pull Request when `Status` is:
-
-* `Superseded`
-* `Duplicate`
-* `Needs rework` — if the replacement has already been created.
 
 ---
 
