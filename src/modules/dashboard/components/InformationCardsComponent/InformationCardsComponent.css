@@ -2,8 +2,6 @@
    Dashboard - estilos generales
    ================================================================== */
 .dashboard {
-  min-height: 100vh;
-  background-color: #f8fafc;
   padding: 32px;
 }
 
