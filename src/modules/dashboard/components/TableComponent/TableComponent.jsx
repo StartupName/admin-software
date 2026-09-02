@@ -1,19 +1,33 @@
 import React from "react";
 import "./TableComponent.css";
 
-
-export function Badge({ text, color = "gray" }) {
+/**
+ * StatusBadge
+ * A small, generic supporting component. It has no knowledge of any
+ * business domain (payments, users, etc). It simply renders a label
+ * with a semantic visual variant (success, info, warning, danger, neutral).
+ *
+ * It is exported so that consumers of <TableComponent /> can use it
+ * inside a column's `render` function, without TableComponent itself
+ * having to know anything about "payment methods" or any other
+ * domain-specific concept.
+ */
+export function StatusBadge({ label, variant = "neutral" }) {
   return (
-    <span className={`tc-badge tc-badge--${color}`}>
-      {text}
+    <span className={`status-badge status-badge--${variant}`}>
+      {label}
     </span>
   );
 }
 
-function DefaultHeaderIcon() {
+/**
+ * Default icon rendered in the table header when the consumer does
+ * not provide a custom `icon` prop.
+ */
+function DefaultTableIcon() {
   return (
     <svg
-      className="tc-header-icon"
+      className="table-component__icon"
       width="16"
       height="16"
       viewBox="0 0 24 24"
@@ -32,29 +46,28 @@ function DefaultHeaderIcon() {
 /**
  * TableComponent
  * ----------------------------------------------------------------
- * Componente de tabla 100% genérico y reutilizable.
+ * Fully generic and reusable table component.
  *
- * No contiene:
- *  - Títulos "quemados" (hardcoded) en el código.
- *  - Registros de ejemplo de ningún módulo específico.
- *  - Conocimiento sobre el dominio de los datos que recibe.
+ * It does NOT contain:
+ *  - Hardcoded titles.
+ *  - Hardcoded records belonging to any specific module.
+ *  - Any knowledge about the domain of the data it receives.
+ *
+ * All rendered content (title, columns, rows) is received via props.
  *
  * Props:
  * @param {string} title
- *    Título que se muestra en el encabezado de la tabla.
- *    Totalmente dinámico: cambia sin tocar el componente.
+ *    Title displayed in the table header. Fully dynamic.
  *
  * @param {React.ReactNode} [icon]
- *    Ícono opcional para el encabezado. Si no se pasa, se usa un
- *    ícono por defecto.
+ *    Optional header icon. Falls back to a default icon when omitted.
  *
  * @param {string} [actionLabel="Ver todos"]
- *    Texto del enlace/acción de la esquina superior derecha.
- *    Se puede omitir pasando actionLabel={null}.
+ *    Label for the action link in the top-right corner of the header.
+ *    Pass actionLabel={null} to hide it.
  *
  * @param {() => void} [onActionClick]
- *    Callback que se ejecuta al hacer click en la acción del
- *    encabezado (ej: "Ver todos").
+ *    Callback fired when the header action is clicked.
  *
  * @param {Array<{
  *    key: string,
@@ -62,24 +75,22 @@ function DefaultHeaderIcon() {
  *    align?: "left" | "center" | "right",
  *    render?: (value: any, row: object, rowIndex: number) => React.ReactNode
  * }>} columns
- *    Define las columnas de la tabla de forma totalmente dinámica.
- *    - `key`: propiedad del objeto de datos que se debe leer.
- *    - `header`: texto que se muestra en el encabezado de columna.
- *    - `render` (opcional): permite personalizar cómo se pinta el
- *       valor de esa celda (ej: como Badge, como link, como botón).
- *       Si no se define, se muestra el valor "tal cual".
+ *    Defines the table columns dynamically.
+ *    - `key`: property read from each data object.
+ *    - `header`: text shown in the column header.
+ *    - `render` (optional): customizes how the cell value is displayed
+ *       (e.g. as a StatusBadge, a link, a button). Defaults to the raw value.
  *
  * @param {Array<object>} data
- *    Lista de objetos que representan las filas de la tabla.
- *    Cada objeto puede tener una forma completamente distinta según
- *    la implementación; el componente no asume ninguna estructura
- *    fija más allá de lo declarado en `columns`.
+ *    List of objects representing table rows. Each object may have a
+ *    completely different shape depending on the implementation; the
+ *    component makes no assumption about structure beyond `columns`.
  *
  * @param {string|function} [rowKey="id"]
- *    Propiedad (o función) usada para obtener una key única por fila.
+ *    Property name (or function) used to compute a unique key per row.
  *
  * @param {string} [emptyMessage="No hay registros para mostrar"]
- *    Mensaje mostrado cuando `data` está vacío.
+ *    Message shown when `data` is empty.
  */
 export default function TableComponent({
   title,
@@ -91,25 +102,25 @@ export default function TableComponent({
   rowKey = "id",
   emptyMessage = "No hay registros para mostrar",
 }) {
-  const getRowKey = (row, index) => {
+  const resolveRowKey = (row, index) => {
     if (typeof rowKey === "function") return rowKey(row, index);
     return row?.[rowKey] ?? index;
   };
 
   return (
-    <div className="tc-card">
-      <div className="tc-header">
-        <div className="tc-header-title">
-          <span className="tc-header-icon-wrapper">
-            {icon || <DefaultHeaderIcon />}
+    <div className="table-component">
+      <div className="table-component__header">
+        <div className="table-component__heading-group">
+          <span className="table-component__icon-wrapper">
+            {icon || <DefaultTableIcon />}
           </span>
-          <h2 className="tc-title">{title}</h2>
+          <h2 className="table-component__title">{title}</h2>
         </div>
 
         {actionLabel && (
           <button
             type="button"
-            className="tc-action-link"
+            className="table-component__action-button"
             onClick={onActionClick}
           >
             {actionLabel}
@@ -117,16 +128,16 @@ export default function TableComponent({
         )}
       </div>
 
-      <div className="tc-table-scroll">
-        <table className="tc-table">
+      <div className="table-component__scroll-container">
+        <table className="table-component__table">
           <thead>
             <tr>
-              {columns.map((col) => (
+              {columns.map((column) => (
                 <th
-                  key={col.key}
-                  className={`tc-th tc-align-${col.align || "left"}`}
+                  key={column.key}
+                  className={`table-component__header-cell text-align-${column.align || "left"}`}
                 >
-                  {col.header}
+                  {column.header}
                 </th>
               ))}
             </tr>
@@ -134,23 +145,29 @@ export default function TableComponent({
           <tbody>
             {data.length === 0 ? (
               <tr>
-                <td className="tc-empty" colSpan={columns.length || 1}>
+                <td
+                  className="table-component__empty-message"
+                  colSpan={columns.length || 1}
+                >
                   {emptyMessage}
                 </td>
               </tr>
             ) : (
               data.map((row, rowIndex) => (
-                <tr key={getRowKey(row, rowIndex)} className="tc-tr">
-                  {columns.map((col) => {
-                    const value = row?.[col.key];
+                <tr
+                  key={resolveRowKey(row, rowIndex)}
+                  className="table-component__body-row"
+                >
+                  {columns.map((column) => {
+                    const cellValue = row?.[column.key];
                     return (
                       <td
-                        key={col.key}
-                        className={`tc-td tc-align-${col.align || "left"}`}
+                        key={column.key}
+                        className={`table-component__body-cell text-align-${column.align || "left"}`}
                       >
-                        {col.render
-                          ? col.render(value, row, rowIndex)
-                          : value}
+                        {column.render
+                          ? column.render(cellValue, row, rowIndex)
+                          : cellValue}
                       </td>
                     );
                   })}

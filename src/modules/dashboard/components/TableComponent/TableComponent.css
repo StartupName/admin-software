@@ -1,6 +1,12 @@
+/* ==========================================================
+   TableComponent styles
+   Fully generic: no dependency on any specific business domain.
+   Class names follow a descriptive BEM-like convention so the
+   purpose of each rule is clear at a glance.
+   ========================================================== */
 
-.tc-card {
-  background: #ebe8e8;
+.table-component {
+  background: #ffffff;
   border: 1px solid #eef0f3;
   border-radius: 16px;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
@@ -14,38 +20,38 @@
 
 /* ---------- Header ---------- */
 
-.tc-header {
+.table-component__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 12px;
 }
 
-.tc-header-title {
+.table-component__heading-group {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.tc-header-icon-wrapper {
+.table-component__icon-wrapper {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: #6b7280;
 }
 
-.tc-header-icon {
+.table-component__icon {
   display: block;
 }
 
-.tc-title {
+.table-component__title {
   font-size: 16px;
   font-weight: 600;
   color: #111827;
   margin: 0;
 }
 
-.tc-action-link {
+.table-component__action-button {
   background: none;
   border: none;
   padding: 0;
@@ -55,24 +61,24 @@
   cursor: pointer;
 }
 
-.tc-action-link:hover {
+.table-component__action-button:hover {
   text-decoration: underline;
 }
 
 /* ---------- Table ---------- */
 
-.tc-table-scroll {
+.table-component__scroll-container {
   width: 100%;
   overflow-x: auto;
 }
 
-.tc-table {
+.table-component__table {
   width: 100%;
   border-collapse: collapse;
   min-width: 640px;
 }
 
-.tc-th {
+.table-component__header-cell {
   text-align: left;
   font-size: 12.5px;
   font-weight: 600;
@@ -84,25 +90,25 @@
   white-space: nowrap;
 }
 
-.tc-th:first-child {
+.table-component__header-cell:first-child {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 
-.tc-th:last-child {
+.table-component__header-cell:last-child {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 
-.tc-tr {
+.table-component__body-row {
   border-bottom: 1px solid #f1f2f4;
 }
 
-.tc-tr:last-child {
+.table-component__body-row:last-child {
   border-bottom: none;
 }
 
-.tc-td {
+.table-component__body-cell {
   padding: 14px 12px;
   font-size: 13.5px;
   color: #374151;
@@ -110,28 +116,30 @@
   vertical-align: middle;
 }
 
-.tc-align-left {
-  text-align: left;
-}
-
-.tc-align-center {
-  text-align: center;
-}
-
-.tc-align-right {
-  text-align: right;
-}
-
-.tc-empty {
+.table-component__empty-message {
   text-align: center;
   padding: 32px 12px;
   color: #9ca3af;
   font-size: 13.5px;
 }
 
-/* ---------- Badge (uso opcional, vía render de columna) ---------- */
+/* ---------- Reusable text alignment utilities ---------- */
 
-.tc-badge {
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+/* ---------- StatusBadge (optional, used via a column's render function) ---------- */
+
+.status-badge {
   display: inline-block;
   padding: 4px 10px;
   border-radius: 999px;
@@ -140,40 +148,41 @@
   line-height: 1.4;
 }
 
-.tc-badge--green {
+.status-badge--success {
   background: #e7f6ec;
   color: #1a8245;
 }
 
-.tc-badge--blue {
+.status-badge--info {
   background: #e8f0fe;
   color: #2563eb;
 }
 
-.tc-badge--orange {
+.status-badge--warning {
   background: #fdf3e0;
   color: #b7791f;
 }
 
-.tc-badge--red {
+.status-badge--danger {
   background: #fdecec;
   color: #c0392b;
 }
 
-.tc-badge--gray {
+.status-badge--neutral {
   background: #f0f1f3;
   color: #4b5563;
 }
 
-/* ---------- Utilidades de apoyo para ejemplos (comprobante/descarga) ---------- */
+/* ---------- Optional helper used by consumers for actionable cells
+   (e.g. a receipt column with a download button) ---------- */
 
-.tc-comprobante {
+.table-component__cell-with-action {
   display: inline-flex;
   align-items: center;
   gap: 6px;
 }
 
-.tc-download-btn {
+.table-component__cell-action-button {
   background: none;
   border: none;
   padding: 0;
@@ -186,12 +195,12 @@
 /* ---------- Responsive ---------- */
 
 @media (max-width: 640px) {
-  .tc-card {
+  .table-component {
     padding: 16px;
     border-radius: 12px;
   }
 
-  .tc-title {
+  .table-component__title {
     font-size: 14.5px;
   }
 }
