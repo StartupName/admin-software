@@ -16,6 +16,7 @@ export default function ChartsComponent() {
       <ApartmentStatusDonut
         data={statusData}
         legendPosition="right"
+        title="Estado de apartamentos"
       />
 
       <ThirdChart data={thirdData} />

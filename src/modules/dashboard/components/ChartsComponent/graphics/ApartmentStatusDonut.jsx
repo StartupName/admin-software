@@ -2,12 +2,12 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 
 // Donut chart is reusable: data and legend position are received via props
 // Legend position controls layout through CSS class legend-${legendPosition}
-export default function ApartmentStatusDonut({ data, legendPosition = "right", style }) {
+export default function ApartmentStatusDonut({ data, legendPosition = "right", title = "Estado de apartamentos", style }) {
   const total = data.reduce((acc, cur) => acc + cur.value, 0)
 
   return (
     <div className={`chartCard donutCard legend-${legendPosition}`} style={style}>
-      <h3 className="donutTitle">Estado de unidades</h3>
+      <h3 className="donutTitle">{title}</h3>
 
       <div className={`donutWrapper legend-${legendPosition}`}>
         <div className="chartContainer">
@@ -30,7 +30,7 @@ export default function ApartmentStatusDonut({ data, legendPosition = "right", s
 
           <div className="centerLabel">
             <span>120</span>
-            <small>Unidades</small>
+            <small>Apartamentos</small>
           </div>
         </div>
 
@@ -52,10 +52,6 @@ export default function ApartmentStatusDonut({ data, legendPosition = "right", s
         </ul>
       </div>
 
-      <a className="donutLink" href="#">
-        Ver detalle por apartamento
-        <span>›</span>
-      </a>
     </div>
   )
 }

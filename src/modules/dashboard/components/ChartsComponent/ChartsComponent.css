@@ -52,7 +52,9 @@
 
 .chartContainer {
   position: relative;
-  flex: 1;
+  flex: none;
+  width: 180px;
+  height: 180px;
   min-width: 0;
 }
 
@@ -152,7 +154,8 @@
 
 .legend-top .chartContainer,
 .legend-bottom .chartContainer {
-  width: 100%;
+  width: 180px;
+  height: 180px;
   flex: none;
 }
 
@@ -171,22 +174,7 @@
   margin-bottom: 0;
 }
 
-.donutLink {
-  margin-top: 12px;
-  padding-top: 12px;
-  border-top: 1px solid #f1f5f9;
-  font-size: 12px;
-  font-weight: 600;
-  color: #2563eb;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
 
-.donutLink span {
-  font-size: 14px;
-}
 
 .pieLegend {
   list-style: none;
