@@ -6,13 +6,13 @@ export default function ApartmentStatusDonut({ data, legendPosition = "right", s
   return (
     <div className={`chartCard donutWrapper legend-${legendPosition}`} style={style}>
       <div className="chartContainer">
-        <ResponsiveContainer width="100%" height={180}>
+        <ResponsiveContainer width="100%" height={140}>
           <PieChart>
             <Pie
               data={data}
               dataKey="value"
-              innerRadius={55}
-              outerRadius={75}
+              innerRadius={42}
+              outerRadius={62}
             >
               {data.map((entry, index) => (
                 <Cell key={index} fill={entry.color} />

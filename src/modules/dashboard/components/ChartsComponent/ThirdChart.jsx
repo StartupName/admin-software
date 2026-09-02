@@ -6,7 +6,7 @@ export default function ThirdChart({ data, style }) {
     <div className="chartCard" style={style}>
       <h3>Recaudo mensual</h3>
 
-      <ResponsiveContainer width="100%" height={200}>
+      <ResponsiveContainer width="100%" height={160}>
         <BarChart data={data}>
           <XAxis dataKey="name" tick={{ fontSize: 12 }} />
           <YAxis tick={{ fontSize: 12 }} />
