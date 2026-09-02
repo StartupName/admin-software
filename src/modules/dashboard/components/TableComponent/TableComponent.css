@@ -3,7 +3,7 @@
   border: 1px solid #eef0f3;
   border-radius: 16px;
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
-  padding: 20px 24px 8px;
+  padding: 16px 20px 6px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif;
   color: #1f2937;
@@ -14,11 +14,11 @@
 .table-component__header {
   display: flex;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .table-component__title {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: #111827;
   margin: 0;
@@ -32,15 +32,15 @@
 .table-component__table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 640px;
+  min-width: 480px;
 }
 
 .table-component__header-cell {
   text-align: left;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 600;
   color: #6b7280;
-  padding: 10px 12px;
+  padding: 8px 12px;
   border-top: 1px solid #eef0f3;
   border-bottom: 1px solid #eef0f3;
   background: #fafafa;
@@ -66,8 +66,8 @@
 }
 
 .table-component__body-cell {
-  padding: 14px 12px;
-  font-size: 13.5px;
+  padding: 10px 12px;
+  font-size: 13px;
   color: #374151;
   white-space: nowrap;
   vertical-align: middle;
@@ -75,7 +75,7 @@
 
 .table-component__empty-message {
   text-align: center;
-  padding: 32px 12px;
+  padding: 24px 12px;
   color: #9ca3af;
   font-size: 13.5px;
 }
