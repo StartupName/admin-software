@@ -1,1 +1,226 @@
-/*Write your code here*/
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 12px;
+  padding: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+
+.chartCard {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chartCard h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.chartHeader h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.chartHeader select {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.chartContainer {
+  position: relative;
+  flex: none;
+  width: 180px;
+  height: 180px;
+  min-width: 0;
+}
+
+.centerLabel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centerLabel span {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.centerLabel small {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.legend {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 8px;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+
+.legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.green {
+  background: #22c55e;
+}
+
+.dot.blue {
+  background: #2563eb;
+}
+
+.dot.yellow {
+  background: #eab308;
+}
+
+.dot.red {
+  background: #ef4444;
+}
+
+.donutCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.donutTitle {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #0f172a;
+}
+
+.donutWrapper {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex: 1;
+}
+
+.legend-right {
+  flex-direction: row;
+}
+
+.legend-left {
+  flex-direction: row-reverse;
+}
+
+.legend-top {
+  flex-direction: column;
+  align-items: center;
+}
+
+.legend-bottom {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.legend-top .chartContainer,
+.legend-bottom .chartContainer {
+  width: 180px;
+  height: 180px;
+  flex: none;
+}
+
+.legend-top .pieLegend,
+.legend-bottom .pieLegend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.legend-top .pieLegend li,
+.legend-bottom .pieLegend li {
+  margin-bottom: 0;
+}
+
+
+
+.pieLegend {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  min-width: 110px;
+}
+
+.pieLegend li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.pieLegend li:last-child {
+  margin-bottom: 0;
+}
+
+.pieLegendText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pieLegendText strong {
+  font-size: 12px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.pieLegendText span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+@media (max-width: 1024px) {
+  .chartsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .chartsGrid {
+    grid-template-columns: 1fr;
+  }
+}
