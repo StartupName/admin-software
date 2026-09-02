@@ -129,10 +129,33 @@
 
 .legend-top {
   flex-direction: column;
+  align-items: center;
 }
 
 .legend-bottom {
   flex-direction: column-reverse;
+  align-items: center;
+}
+
+.legend-top .chartContainer,
+.legend-bottom .chartContainer {
+  width: 100%;
+  flex: none;
+}
+
+.legend-top .pieLegend,
+.legend-bottom .pieLegend {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.legend-top .pieLegend li,
+.legend-bottom .pieLegend li {
+  margin-bottom: 0;
 }
 
 .pieLegend {

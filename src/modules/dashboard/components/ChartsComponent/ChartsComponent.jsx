@@ -1,6 +1,6 @@
-import IncomeChart from './IncomeChart'
-import ApartmentStatusDonut from './ApartmentStatusDonut'
-import ThirdChart from './ThirdChart'
+import IncomeChart from './graphics/IncomeChart'
+import ApartmentStatusDonut from './graphics/ApartmentStatusDonut'
+import ThirdChart from './graphics/ThirdChart'
 
 import incomeData from './data/incomeData.json'
 import statusData from './data/statusData.json'
