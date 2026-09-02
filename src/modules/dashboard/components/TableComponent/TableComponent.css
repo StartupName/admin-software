@@ -26,13 +26,13 @@
 
 .table-component__scroll-container {
   width: 100%;
-  overflow-x: auto;
+  overflow: visible;
 }
 
 .table-component__table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 480px;
+  min-width: 0;
 }
 
 .table-component__header-cell {
@@ -44,7 +44,7 @@
   border-top: 1px solid #eef0f3;
   border-bottom: 1px solid #eef0f3;
   background: #fafafa;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .table-component__header-cell:first-child {
@@ -69,7 +69,7 @@
   padding: 10px 12px;
   font-size: 13px;
   color: #374151;
-  white-space: nowrap;
+  white-space: normal;
   vertical-align: middle;
 }
 
