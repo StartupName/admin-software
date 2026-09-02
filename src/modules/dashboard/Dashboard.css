@@ -1,0 +1,27 @@
+.dashboard_table{
+    min-height: 0;
+    padding: 10px;
+}
+
+.transfer, .cash{
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.transfer{
+    background-color: #E3F0FF;
+    color: #2F80C9;
+}
+.cash{
+    background-color: #E7F7EC;
+    color: #3A9B5F;
+}
+
+.layout{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -6,9 +6,11 @@
 }
 
 .main{
-    overflow-y: auto;
+    overflow-y: scroll;
     position: fixed;
     top: 0; left: 20%;
-    width: 80%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 80%; height: 100vh;
     background-color: #f8fafc;
 }

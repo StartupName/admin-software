@@ -1,1 +1,190 @@
-/* Write your code here */
+.table-component {
+  background: #ffffff;
+  border: 1px solid #eef0f3;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  padding: 16px 20px 6px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+  color: #1f2937;
+  width: calc(100% - 48px); /* keep a gap from the viewport sides */
+  margin: 0 24px; /* separation from screen laterals */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: .5px solid #c9cacb;
+}
+
+.table-component__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.table-component__title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.table-component__scroll-container {
+  width: 100%;
+  overflow: auto; /* allow both vertical and horizontal scrolling inside the table only */
+  flex: 1 1 auto; /* take remaining height so only this area scrolls */
+  position: relative; /* ensure sticky headers are positioned relative to this scroll area */
+}
+
+.table-component__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 0;
+  min-width: max-content; /* let the table expand to its content width so horizontal scroll appears in the container */
+}
+
+.table-component__header-cell {
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  padding: 8px 12px;
+  border-top: 1px solid #eef0f3;
+  border-bottom: 1px solid #eef0f3;
+  background: #fafafa;
+  white-space: normal;
+  position: sticky; /* keep header fixed while scrolling inside the table container */
+  top: 0;
+  z-index: 3;
+}
+
+.table-component__header-cell:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.table-component__header-cell:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.table-component__body-row {
+  border-bottom: 1px solid #f1f2f4;
+}
+
+.table-component__body-row:last-child {
+  border-bottom: none;
+}
+
+.table-component__body-cell {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: black;
+  white-space: normal;
+  vertical-align: middle;
+}
+
+.table-component__empty-message {
+  text-align: center;
+  padding: 24px 12px;
+  color: #9ca3af;
+  font-size: 13.5px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.status-badge--success {
+  background: #e7f6ec;
+  color: #1a8245;
+}
+
+.status-badge--info {
+  background: #e8f0fe;
+  color: #2563eb;
+}
+
+.status-badge--warning {
+  background: #fdf3e0;
+  color: #b7791f;
+}
+
+.status-badge--danger {
+  background: #fdecec;
+  color: #c0392b;
+}
+
+.status-badge--neutral {
+  background: #f0f1f3;
+  color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .table-component {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .table-component__title {
+    font-size: 14.5px;
+  }
+}
+
+/* Responsive: stacked rows on small screens */
+@media (max-width: 860px) {
+  .table-component__scroll-container {
+    overflow-x: auto;
+  }
+
+  .table-component__table thead {
+    display: none;
+  }
+
+  .table-component__table,
+  .table-component__table tbody,
+  .table-component__table tr,
+  .table-component__table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table-component__body-row {
+    margin-bottom: 12px;
+    border: 1px solid #eef0f3;
+    border-radius: 10px;
+    padding: 10px;
+    background: #ffffff;
+  }
+
+  .table-component__body-cell {
+    padding: 8px 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+  }
+
+  .table-component__body-cell:before {
+    content: attr(data-label);
+    color: #6b7280;
+    font-weight: 600;
+    margin-right: 12px;
+    flex: 0 0 auto;
+  }
+
+  .table-component__body-cell > * {
+    flex: 1 1 auto;
+    text-align: right;
+  }
+
+  .table-component__empty-message {
+    padding: 18px 12px;
+  }
+}
