@@ -1,0 +1,165 @@
+.sidemenu {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 14px 14px;
+  background: #0b1f3a;
+  color: #f8fafc;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+.sidemenu-header {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 4px 8px 20px;
+}
+
+.sidemenu-logo {
+  display: block;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 12px;
+}
+
+.sidemenu-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.sidemenu-subtitle {
+  margin: 6px 0 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+.sidemenu-nav {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidemenu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.sidemenu-link svg {
+  flex-shrink: 0;
+}
+
+.sidemenu-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.sidemenu-link.active {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+.sidemenu-footer {
+  flex-shrink: 0;
+  padding-top: 12px;
+}
+
+.sidemenu-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.45);
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidemenu-profile:hover {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.sidemenu-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.sidemenu-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.sidemenu-avatar--initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e3a5f;
+  color: #e2e8f0;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.sidemenu-status {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  border: 2px solid #0b1f3a;
+}
+
+.sidemenu-profile-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.sidemenu-profile-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidemenu-profile-role {
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+.sidemenu-chevron {
+  flex-shrink: 0;
+  color: #94a3b8;
+  transition: transform 0.15s ease;
+}
+
+.sidemenu-chevron.open {
+  transform: rotate(180deg);
+}
