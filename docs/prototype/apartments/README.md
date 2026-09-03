@@ -158,3 +158,5 @@ export default DashBoard
 This latter code is flexible enough to be reused by passing in completely different styles to achieve the look required for the specific use case; furthermore, the received data can easily be augmented with additional elements to create the "Actions" column shown in the reference image.
 
 For more information, you can consult the table documentation at the following link: [Table Component Documentation](https://github.com/StartupName/admin-software/blob/main/docs/prototype/dashboard/README.md#8-transactions-table-component)
+
+Keep in mind that the data to be read from the table must be dummy data representing the actual database records—as simple as a list of objects in JSON format.
