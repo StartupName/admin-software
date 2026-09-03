@@ -104,3 +104,57 @@ Remember to make the navigation component flexible.
 Everything must look exactly as it does in the image; however, the numerical values ​​representing the statistics must be passed via `props` or variables when querying the database.
 
 The "Register Apartment" button should not be functional yet; simply style its active and hover states.
+
+# 7. Reuse table with test data
+
+## Objective:
+
+We have a fully reusable table component created within the dashboard component; we need to take that component and adapt it to what we are currently working on—namely, the general table.
+
+## Contextualization
+
+The table component in question has certain properties that can be passed to it dynamically to facilitate its rendering; among them is the following code:
+
+```javascript
+import dataTable from './alguna/ruta/data_table.json'
+
+function DashBoard() {
+  const columns = []
+
+  for (let element of Object.keys(dataTable[0])){
+    columns.push({
+      key: element,
+      header: element.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+    })
+  }
+
+  columns.map((object) => {
+    if (object.key === 'estado') {
+      object.render = (value) => (
+        <span 
+          className={`
+            ${
+              value === 'Al día' 
+              ? 'uptodate'
+              : value === "Pendiente"
+                ? 'pending'
+                : 'delay'}`}>
+          {value}
+        </span>
+      )
+    }
+  })
+  
+  return (
+    <>
+      <TableComponent icon={<Building2 />} title={"Apartamentos"} columns={columns}/>
+    </>
+  )
+}
+
+export default DashBoard
+```
+
+This latter code is flexible enough to be reused by passing in completely different styles to achieve the look required for the specific use case; furthermore, the received data can easily be augmented with additional elements to create the "Actions" column shown in the reference image.
+
+For more information, you can consult the table documentation at the following link: [Table Component Documentation](https://github.com/StartupName/admin-software/blob/main/docs/prototype/dashboard/README.md#8-transactions-table-component)
