@@ -1,0 +1,302 @@
+[
+  {
+    "apartamento": "Apto 101",
+    "piso": 1,
+    "propietario": "Diego Alejandro Vargas",
+    "residenteActual": "Diego Alejandro Vargas",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "23/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 102",
+    "piso": 1,
+    "propietario": "Camila Restrepo G.",
+    "residenteActual": "Camila Restrepo G.",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "22/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 103",
+    "piso": 1,
+    "propietario": "Santiago Gómez Pérez",
+    "residenteActual": "Santiago Gómez Pérez",
+    "estado": "Pendiente",
+    "saldoPendiente": 95000,
+    "ultimoPago": "10/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 104",
+    "piso": 1,
+    "propietario": "Natalia Ramírez López",
+    "residenteActual": "Arrendado",
+    "estado": "En mora",
+    "saldoPendiente": 280000,
+    "ultimoPago": "15/06/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 201",
+    "piso": 2,
+    "propietario": "Carlos Andrés Ruiz",
+    "residenteActual": "Carlos Andrés Ruiz",
+    "estado": "Pendiente",
+    "saldoPendiente": 190000,
+    "ultimoPago": "05/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 202",
+    "piso": 2,
+    "propietario": "Laura Martínez H.",
+    "residenteActual": "Laura Martínez H.",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "23/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 203",
+    "piso": 2,
+    "propietario": "Juan Esteban Castro",
+    "residenteActual": "Juan Esteban Castro",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "21/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 204",
+    "piso": 2,
+    "propietario": "Valentina Herrera",
+    "residenteActual": "Arrendado",
+    "estado": "Pendiente",
+    "saldoPendiente": 75000,
+    "ultimoPago": "02/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 301",
+    "piso": 3,
+    "propietario": "Jorge Mario Salazar",
+    "residenteActual": "Jorge Mario Salazar",
+    "estado": "En mora",
+    "saldoPendiente": 380000,
+    "ultimoPago": "15/06/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 302",
+    "piso": 3,
+    "propietario": "Daniela Ospina Torres",
+    "residenteActual": "Daniela Ospina Torres",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "24/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 303",
+    "piso": 3,
+    "propietario": "Sebastián Cárdenas",
+    "residenteActual": "Arrendado",
+    "estado": "Pendiente",
+    "saldoPendiente": 120000,
+    "ultimoPago": "07/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 304",
+    "piso": 3,
+    "propietario": "María Fernanda López",
+    "residenteActual": "María Fernanda López",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "23/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 401",
+    "piso": 4,
+    "propietario": "Andrés Felipe Cano",
+    "residenteActual": "Arrendado",
+    "estado": "Pendiente",
+    "saldoPendiente": 70000,
+    "ultimoPago": "01/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 402",
+    "piso": 4,
+    "propietario": "Paula Andrea Mejía",
+    "residenteActual": "Paula Andrea Mejía",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "25/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 403",
+    "piso": 4,
+    "propietario": "Felipe Restrepo Vélez",
+    "residenteActual": "Felipe Restrepo Vélez",
+    "estado": "En mora",
+    "saldoPendiente": 450000,
+    "ultimoPago": "12/05/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 404",
+    "piso": 4,
+    "propietario": "Mariana Giraldo",
+    "residenteActual": "Arrendado",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "22/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 501",
+    "piso": 5,
+    "propietario": "Alejandro Vélez",
+    "residenteActual": "Alejandro Vélez",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "20/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 502",
+    "piso": 5,
+    "propietario": "Juliana Torres",
+    "residenteActual": "Juliana Torres",
+    "estado": "En mora",
+    "saldoPendiente": 250000,
+    "ultimoPago": "30/05/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 503",
+    "piso": 5,
+    "propietario": "Mateo Arango",
+    "residenteActual": "Arrendado",
+    "estado": "Pendiente",
+    "saldoPendiente": 85000,
+    "ultimoPago": "04/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 504",
+    "piso": 5,
+    "propietario": "Sara Montoya",
+    "residenteActual": "Sara Montoya",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "26/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 601",
+    "piso": 6,
+    "propietario": "Ricardo Bustamante",
+    "residenteActual": "Ricardo Bustamante",
+    "estado": "En mora",
+    "saldoPendiente": 570000,
+    "ultimoPago": "18/04/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 602",
+    "piso": 6,
+    "propietario": "Isabella Franco",
+    "residenteActual": "Isabella Franco",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "24/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 603",
+    "piso": 6,
+    "propietario": "Mauricio Echeverri",
+    "residenteActual": "Arrendado",
+    "estado": "Pendiente",
+    "saldoPendiente": 110000,
+    "ultimoPago": "03/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 604",
+    "piso": 6,
+    "propietario": "Carolina Duque",
+    "residenteActual": "Carolina Duque",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "23/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 701",
+    "piso": 7,
+    "propietario": "Esteban Correa",
+    "residenteActual": "Esteban Correa",
+    "estado": "Pendiente",
+    "saldoPendiente": 160000,
+    "ultimoPago": "06/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 702",
+    "piso": 7,
+    "propietario": "Manuela Zapata",
+    "residenteActual": "Arrendado",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "25/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 703",
+    "piso": 7,
+    "propietario": "Nicolás Jaramillo",
+    "residenteActual": "Nicolás Jaramillo",
+    "estado": "En mora",
+    "saldoPendiente": 320000,
+    "ultimoPago": "20/06/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 704",
+    "piso": 7,
+    "propietario": "Catalina Ríos",
+    "residenteActual": "Catalina Ríos",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "24/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 801",
+    "piso": 8,
+    "propietario": "Tomás Valencia",
+    "residenteActual": "Arrendado",
+    "estado": "Pendiente",
+    "saldoPendiente": 65000,
+    "ultimoPago": "08/08/2024",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 802",
+    "piso": 8,
+    "propietario": "Gabriela Escobar",
+    "residenteActual": "Gabriela Escobar",
+    "estado": "Al día",
+    "saldoPendiente": 0,
+    "ultimoPago": "26/08/2024",
+    "acciones": ["ver", "opciones"]
+  }
+]
