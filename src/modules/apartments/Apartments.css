@@ -1,1 +1,98 @@
-/*Write your code here*/
+.apartments-unit {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.apartments-balance--due {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.apartments-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.apartments-actions__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #334155;
+  cursor: pointer;
+}
+
+.apartments-actions__btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.apartments-actions__btn:active {
+  background: #e2e8f0;
+}
+
+.apartments-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.4);
+  z-index: 30;
+}
+
+.apartments-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 220px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+}
+
+.apartments-modal__title {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.apartments-modal__action {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.apartments-modal__action:hover {
+  background: #f8fafc;
+}
+
+.apartments-modal__action:active {
+  background: #e2e8f0;
+}
+
+.apartments-modal__action--danger {
+  color: #c0392b;
+}
+
+.apartments-modal__action--danger:hover {
+  background: #fdecec;
+}
+
+.apartments-modal__action--danger:active {
+  background: #f8d7d7;
+}
