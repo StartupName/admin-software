@@ -16,7 +16,7 @@ export default function SummaryComponent({ values = [] }) {
         <button
           type="button"
           className="apartments-summary__register"
-          onClick={() => console.log('Register')}
+          onClick={() => console.log('Register')} 
         >
           <Plus size={18} strokeWidth={2.5} />
           Registrar apartamento
