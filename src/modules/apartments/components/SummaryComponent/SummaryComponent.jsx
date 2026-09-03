@@ -52,7 +52,7 @@ export default function SummaryComponent({ values = [] }) {
           </span>
         </div>
 
-        <div className="apartments-summary__stat">
+        <div className="apartments-summary__stat"> 
           <span className="apartments-summary__value apartments-summary__value--red">{overdue}</span>
           <span className="apartments-summary__label">
             <span className="apartments-summary__dot apartments-summary__dot--red" />
