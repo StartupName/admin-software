@@ -2,13 +2,20 @@ import IncomeChart from './graphics/IncomeChart'
 import ApartmentStatusDonut from './graphics/ApartmentStatusDonut'
 import ThirdChart from './graphics/ThirdChart'
 
-import incomeData from './data/incomeData.json'
-import statusData from './data/statusData.json'
-import thirdData from './data/thirdData.json'
+import defaultIncomeData from './data/incomeData.json'
+import defaultStatusData from './data/statusData.json'
+import defaultThirdData from './data/thirdData.json'
 
 import './ChartsComponent.css'
 
-export default function ChartsComponent() {
+// Reuse: ChartsComponent now accepts data via props for reuse in other modules
+// (e.g., payments/component/ChartComponent/example_data.json). Falls back to
+// dashboard default JSON to preserve existing behavior without redesign for server data
+export default function ChartsComponent({
+  incomeData = defaultIncomeData,
+  statusData = defaultStatusData,
+  thirdData = defaultThirdData,
+}) {
   return (
     <div className="chartsGrid">
       <IncomeChart data={incomeData} />
