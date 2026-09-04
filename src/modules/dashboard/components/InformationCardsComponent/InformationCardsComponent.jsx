@@ -95,13 +95,19 @@ function MultiDatePicker({ availableDates, selectedDate, onChange }) {
 /* ------------------------------------------------------------------ */
 /*  AdminSummary: ensambla todo, adminName llega por prop              */
 /* ------------------------------------------------------------------ */
-function AdminSummary({ adminName, showDatePicker = true }) {
+// Reuse: icon map allows JSON test data (icon as string) to resolve to component
+// without requiring the component to be redesigned for server data
+const iconMap = { DollarSign, Wallet, AlertTriangle, ShoppingCart, BarChart3 }
+
+function AdminSummary({ adminName, showDatePicker = true, cardsData: cardsDataProp }) {
   // Datos de prueba para el selector de fechas (por ahora, un array estático)
   const testDates = ["Junio 2024", "Julio 2024", "Agosto 2024", "Septiembre 2024"];
   const [selectedDate, setSelectedDate] = useState("Agosto 2024");
 
-  // Datos de prueba para las tarjetas — en un caso real vendrían de una API
-  const cardsData = [
+  // Reuse: if cardsData is passed via props (e.g., from apartments/example_data.json),
+  // use that data and map icon strings to components; otherwise fallback to
+  // dashboard's default hardcoded data to preserve existing behavior
+  const defaultCardsData = [
     {
       id: "recaudo",
       icon: DollarSign,
@@ -137,7 +143,13 @@ function AdminSummary({ adminName, showDatePicker = true }) {
       value: "$ 6.110.000",
       circleColor: "#8B5CF6",
     },
-  ];
+  ]
+
+  const rawCardsData = cardsDataProp || defaultCardsData
+  const cardsData = rawCardsData.map((card) => ({
+    ...card,
+    icon: typeof card.icon === "string" ? iconMap[card.icon] || DollarSign : card.icon,
+  }))
 
   return (
     <div className="dashboard">
@@ -175,8 +187,11 @@ function AdminSummary({ adminName, showDatePicker = true }) {
   );
 }
 
- function InformationCardsComponent({ adminName, showDatePicker = true }) {
-  return <AdminSummary adminName={adminName} showDatePicker={showDatePicker} />;
+ // Reuse: InformationCardsComponent now forwards optional cardsData prop so that
+ // other modules (e.g., apartments) can reuse the same component with JSON test
+ // data without modifying its internal implementation
+ function InformationCardsComponent({ adminName, showDatePicker = true, cardsData }) {
+  return <AdminSummary adminName={adminName} showDatePicker={showDatePicker} cardsData={cardsData} />;
 }
 
 export default InformationCardsComponent

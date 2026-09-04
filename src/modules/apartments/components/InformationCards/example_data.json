@@ -1,0 +1,30 @@
+[
+  {
+    "id": "monthly-collection",
+    "title": "Recaudo del mes",
+    "value": "$ 24.350.000",
+    "circleColor": "#10B981",
+    "icon": "DollarSign"
+  },
+  {
+    "id": "annual-collection",
+    "title": "Recaudo anual",
+    "value": "$ 108.350.000",
+    "circleColor": "#3B82F6",
+    "icon": "Wallet"
+  },
+  {
+    "id": "resident-debt",
+    "title": "Deuda residentes",
+    "value": "$ 8.200.000",
+    "circleColor": "#EF4444",
+    "icon": "AlertTriangle"
+  },
+  {
+    "id": "monthly-expenses",
+    "title": "Gastos del mes",
+    "value": "$ 4.850.000",
+    "circleColor": "#F59E0B",
+    "icon": "ShoppingCart"
+  }
+]
