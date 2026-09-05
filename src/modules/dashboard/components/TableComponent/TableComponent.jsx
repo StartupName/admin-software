@@ -1,5 +1,6 @@
 import "./TableComponent.css";
 import defaultData from "./data/data_table.json";
+import NavigationComponent from "../../../apartments/components/NavigationComponent/NavigationComponent";
 
 export function StatusBadge({ label, variant = "neutral" }) {
   return (
@@ -24,6 +25,7 @@ export default function TableComponent({
   columns = [],
   data = null,
   emptyMessage = "No hay registros para mostrar",
+  showNavigation = true
 }) {
   const finalData = Array.isArray(data) && data.length > 0 ? data : defaultData;
   const finalColumns = (columns && columns.length > 0) ? columns : buildDefaultColumnsFromData(finalData);
@@ -82,6 +84,7 @@ export default function TableComponent({
           </tbody>
         </table>
       </div>
+      <NavigationComponent showComponent = {showNavigation}/>
     </div>
   );
 }
