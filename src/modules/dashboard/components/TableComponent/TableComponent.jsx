@@ -1,6 +1,6 @@
 import "./TableComponent.css";
 import defaultData from "./data/data_table.json";
-import NavigationComponent from "../../../apartments/components/NavigationComponent/NavigationComponent";
+import NavigationComponent from "../../../../common/components/NavigationComponent/NavigationComponent";
 
 export function StatusBadge({ label, variant = "neutral" }) {
   return (

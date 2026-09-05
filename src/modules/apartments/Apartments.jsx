@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Building2, EllipsisVertical } from 'lucide-react'
 import './Apartments.css'
-import NavigationComponent from './components/NavigationComponent/NavigationComponent'
+import NavigationComponent from '../../common/components/NavigationComponent/NavigationComponent'
 import SummaryComponent from './components/SummaryComponent/SummaryComponent'
 import TableComponent from '../dashboard/components/TableComponent/TableComponent'
 import exampleData from './components/TableComponent/data/example_data.json'

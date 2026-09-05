@@ -1,0 +1,1 @@
+`In the future, this folder must contain all the components being reused in the current software.`
