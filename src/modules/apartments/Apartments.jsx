@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { 
+import {
   Building2,
   EllipsisVertical,
   Eye
@@ -7,6 +7,8 @@ import {
 import './Apartments.css'
 import NavigationComponent from '../../common/components/NavigationComponent/NavigationComponent'
 import SummaryComponent from './components/SummaryComponent/SummaryComponent'
+import TopNavigationComponent from '../dashboard/components/topNavigationComponent/topNavigationComponent'
+import topNavData from './components/TopNavigation/example_data.json'
 import TableComponent from '../dashboard/components/TableComponent/TableComponent'
 import exampleData from './components/TableComponent/data/example_data.json'
 
@@ -112,6 +114,10 @@ function Apartments() {
 
   return (
     <>
+      <TopNavigationComponent
+        organizationName={topNavData.organizationName}
+        notificationCount={topNavData.notificationCount}
+      />
       <SummaryComponent values={[120, 78, 28, 14, 92]} />
       <div className="apartments_table">
         <TableComponent
