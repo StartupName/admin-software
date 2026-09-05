@@ -9,8 +9,9 @@ import './App.css'
 import SideMenu from './modules/sidemenu/SideMenu'
 import DashBoard from './modules/dashboard/Dashboard'
 import Apartments from './modules/apartments/Apartments'
-import Wallet from './modules/wallet/wallet'
-import Payments from './modules/payments/payments'
+import Wallet from './modules/wallet/Wallet'
+import Payments from './modules/payments/Payments'
+import Expenses from './modules/expenses/Expenses'
 
 
 function Layout(){
@@ -41,7 +42,7 @@ function App() {
                     <Route path="apartments" element={<Apartments />} />
                     <Route path="payments" element={<Payments />} />
                     <Route path="wallet" element={<Wallet />} />
-                    <Route path="expenses" element={<SectionPlaceholder title="Gastos" />} />
+                    <Route path="expenses" element={<Expenses />} />
                     <Route path="reports" element={<SectionPlaceholder title="Reportes" />} />
                     <Route path="communications" element={<SectionPlaceholder title="Comunicaciones" />} />
                     <Route path="users" element={<SectionPlaceholder title="Usuarios y roles" />} />

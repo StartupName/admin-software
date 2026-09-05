@@ -1,4 +1,4 @@
-import './wallet.css'
+import './Wallet.css'
 import TopNavigationComponent from '../dashboard/components/topNavigationComponent/topNavigationComponent'
 import InformationCardsComponent from '../dashboard/components/InformationCardsComponent/InformationCardsComponent'
 import cardsData from './components/InformationCardsComponent/example_data'
@@ -24,4 +24,3 @@ export default function Wallet(){
         </>
     )
 }
-
