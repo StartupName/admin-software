@@ -1,0 +1,60 @@
+{
+  "apartments": [
+    {
+      "id": "1",
+      "apto": "1",
+      "codigo": "AP1-C1"
+    },
+    {
+      "id": "2",
+      "apto": "2",
+      "codigo": "AP2-F5"
+    },
+    {
+      "id": "3",
+      "apto": "3",
+      "codigo": "AP3-H9"
+    },
+    {
+      "id": "4",
+      "apto": "4",
+      "codigo": "AP4-V3"
+    },
+    {
+      "id": "5",
+      "apto": "5",
+      "codigo": "AP5-G7"
+    },
+    {
+      "id": "6",
+      "apto": "6",
+      "codigo": "AP6-Z1"
+    },
+    {
+      "id": "7",
+      "apto": "7",
+      "codigo": "AP7-E5"
+    },
+    {
+      "id": "8",
+      "apto": "8",
+      "codigo": "AP8-R9"
+    },
+    {
+      "id": "9",
+      "apto": "9",
+      "codigo": "AP9-N3"
+    },
+    {
+      "id": "10",
+      "apto": "10",
+      "codigo": "AP10-Y7"
+    }
+  ],
+  "users": [
+    {
+      "email": "vecino1@correo.com",
+      "apartmentId": "1"
+    }
+  ]
+}

@@ -9,6 +9,8 @@ import './App.css'
 import SideMenu from './modules/sidemenu/SideMenu'
 import DashBoard from './modules/dashboard/Dashboard'
 import Apartments from './modules/apartments/Apartments'
+import Login from './modules/auth/Login'
+import Register from './modules/auth/Register'
 
 
 function Layout(){
@@ -33,6 +35,9 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path="/login" element={<Login />} />
+                {/* TEMPORAL - demo registro una-vez, se puede revertir */}
+                <Route path="/register" element={<Register />} />
                 <Route path="/" element={<Layout />}>
                     <Route index element={<>Home</>} />
                     <Route path="dashboard" element={<DashBoard />} />
