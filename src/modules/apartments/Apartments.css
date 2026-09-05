@@ -24,6 +24,23 @@
   color: #c0392b;
 }
 
+.debt-free{
+  color: #1a8245;
+}
+
+.debt-pending{
+  color: #b7791f;
+}
+
+.indebted{
+  color:  #c0392b;
+}
+
+.apartmentTitleStyle{
+  color: #1d2370;
+  font-weight: bold;
+}
+
 .apartments_table {
   min-height: 0;
   margin: 10px 24px;
@@ -35,9 +52,10 @@
 .apartments-row-actions {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start; 
 }
 
+.apartments-eye,
 .apartments-more-options {
   display: inline-flex;
   align-items: center;
@@ -49,13 +67,16 @@
   border-radius: 8px;
   background: #ffffff;
   color: #4b5563;
+  cursor: pointer;
 }
 
+.apartments-eye:hover,
 .apartments-more-options:hover {
   background: #f3f4f6;
   color: #111827;
 }
 
+.apartments-eye:active,
 .apartments-more-options:active {
   background: #e5e7eb;
   color: #111827;
@@ -92,6 +113,7 @@
   font-size: 14px;
   font-weight: 600;
   text-align: left;
+  cursor: pointer;
 }
 
 .apartments-modal__btn:hover {
