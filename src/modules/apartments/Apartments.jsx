@@ -78,13 +78,14 @@ function Apartments() {
   return (
     <>
       <SummaryComponent values={[120, 78, 28, 14, 92]} />
-      <TableComponent
-        icon={<Building2 />}
-        title={"Apartamentos"}
-        columns={columns}
-        data={exampleData}
-      />
-      <NavigationComponent />
+      <div className="apartments_table">
+        <TableComponent
+          icon={<Building2 />}
+          title={"Apartamentos"}
+          columns={columns}
+          data={exampleData}
+        />
+      </div>
       {selectedRecord && (
         <div className="apartments-modal-overlay" onClick={closeModal}>
           <div

@@ -64,7 +64,14 @@ function DashBoard() {
       <InformationCardsComponent/>
       <ChartsComponent />
       <div className="dashboard_table">
-        <TableComponent icon = {<FileText/>} title={"Último pagos registrados"} columns={columns} data={defaultData} className="table"/>
+        <TableComponent
+          icon = {<FileText/>}
+          title= {"Último pagos registrados"}
+          columns= {columns}
+          data= {defaultData}
+          className= "table"
+          showNavigation= {false}
+        />
         <QuickActionsComponent actions={defaultQuickActions} className="quick-actions"/>
       </div>
     </>

@@ -24,6 +24,14 @@
   color: #c0392b;
 }
 
+.apartments_table {
+  min-height: 0;
+  margin: 10px 24px;
+}
+
+.apartments_table > .table-component{
+  margin: 0;
+}
 .apartments-row-actions {
   display: flex;
   align-items: center;
