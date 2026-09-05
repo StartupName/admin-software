@@ -8,7 +8,10 @@ import './Apartments.css'
 import NavigationComponent from '../../common/components/NavigationComponent/NavigationComponent'
 import SummaryComponent from './components/SummaryComponent/SummaryComponent'
 import TableComponent from '../dashboard/components/TableComponent/TableComponent'
+import TopNavigationComponent from '../dashboard/components/topNavigationComponent/topNavigationComponent'
+import InformationCardsComponent from '../dashboard/components/InformationCardsComponent/InformationCardsComponent'
 import exampleData from './components/TableComponent/data/example_data.json'
+import cardsData from './components/InformationCardsComponent/example_data'
 
 function Apartments() {
   const [selectedRecord, setSelectedRecord] = useState(null)
@@ -112,6 +115,12 @@ function Apartments() {
 
   return (
     <>
+      <TopNavigationComponent organizationName="Altos del Parque" />
+      <InformationCardsComponent
+        cardsData={cardsData}
+        adminName="Laura"
+        showDatePicker={false}
+      />
       <SummaryComponent values={[120, 78, 28, 14, 92]} />
       <div className="apartments_table">
         <TableComponent
