@@ -29,7 +29,7 @@ export default function ApartmentStatusDonut({ data, legendPosition = "right", t
           </ResponsiveContainer>
 
           <div className="centerLabel">
-            <span>120</span>
+            <span>{total}</span>
             <small>Apartamentos</small>
           </div>
         </div>
