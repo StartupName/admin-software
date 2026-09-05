@@ -1,6 +1,7 @@
 import './Dashboard.css'
 import TableComponent from './components/TableComponent/TableComponent'
-import QuickActionsComponent, { defaultQuickActions } from './components/QuickActionsComponent/QuickActionsComponent'
+import QuickActionsComponent from './components/QuickActionsComponent/QuickActionsComponent'
+import { exampleQuickActions } from './components/QuickActionsComponent/example_data'
 import TopNavigationComponent from './components/topNavigationComponent/topNavigationComponent'
 import InformationCardsComponent from './components/InformationCardsComponent/InformationCardsComponent'
 import ChartsComponent from './components/ChartsComponent/ChartsComponent'
@@ -8,7 +9,7 @@ import defaultData from './components/TableComponent/data/data_table.json';
 
 import { ArrowDownToLine, FileText } from 'lucide-react'
 
-import './Dashboard.css'
+import './Dashboard.css'   // ← eliminar
 
 function DashBoard() {
   function download(){
@@ -72,7 +73,10 @@ function DashBoard() {
           className= "table"
           showNavigation= {false}
         />
-        <QuickActionsComponent actions={defaultQuickActions} className="quick-actions"/>
+        <QuickActionsComponent
+          actions={exampleQuickActions}
+          className="quick-actions"
+        />
       </div>
     </>
   )
