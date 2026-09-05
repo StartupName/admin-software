@@ -1,4 +1,4 @@
-import './expenses.css'
+import './Expenses.css'
 
 export default function Expenses(){
     return (

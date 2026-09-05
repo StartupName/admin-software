@@ -9,9 +9,9 @@ import './App.css'
 import SideMenu from './modules/sidemenu/SideMenu'
 import DashBoard from './modules/dashboard/Dashboard'
 import Apartments from './modules/apartments/Apartments'
-import Wallet from './modules/wallet/wallet'
-import Payments from './modules/payments/payments'
-import Expenses from './modules/expenses/expenses'
+import Wallet from './modules/wallet/Wallet'
+import Payments from './modules/payments/Payments'
+import Expenses from './modules/expenses/Expenses'
 
 
 function Layout(){

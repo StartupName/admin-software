@@ -1,3 +1,5 @@
+import './Wallet.css'
+
 export default function Wallet(){
     return (
         <>
