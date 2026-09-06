@@ -44,11 +44,22 @@
 .apartments_table {
   min-height: 0;
   margin: 10px 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: flex-start;
 }
 
 .apartments_table > .table-component{
   margin: 0;
+  flex: 1;
+  min-width: 0;
 }
+
+.apartments_table > .quick-actions-container {
+  flex-shrink: 0;
+}
+
 .apartments-row-actions {
   display: flex;
   align-items: center;

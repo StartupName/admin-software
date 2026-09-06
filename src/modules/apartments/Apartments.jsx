@@ -1,14 +1,51 @@
 import { useState } from 'react'
-import { 
+import {
   Building2,
   EllipsisVertical,
-  Eye
+  Eye,
+  DollarSign,
+  Wallet,
+  AlertTriangle,
+  ShoppingCart,
+  BarChart3,
+  FileText,
 } from 'lucide-react'
 import './Apartments.css'
-import NavigationComponent from '../../common/components/NavigationComponent/NavigationComponent'
 import SummaryComponent from './components/SummaryComponent/SummaryComponent'
 import TableComponent from '../dashboard/components/TableComponent/TableComponent'
+// Reused Dashboard components are not modified: they already accept data via props.
+// This JSON can later be replaced by server data without redesigning those components.
+import TopNavigationComponent from '../dashboard/components/topNavigationComponent/topNavigationComponent'
+import InformationCardsComponent from '../dashboard/components/InformationCardsComponent/InformationCardsComponent'
+import QuickActionsComponent from '../dashboard/components/QuickActionsComponent/QuickActionsComponent'
 import exampleData from './components/TableComponent/data/example_data.json'
+import navData from './components/topNavigationComponent/example_data.json'
+import cardsJson from './components/InformationCardsComponent/example_data.json'
+import actionsJson from './components/QuickActionsComponent/example_data.json'
+
+const cardIcons = {
+  DollarSign,
+  Wallet,
+  AlertTriangle,
+  ShoppingCart,
+  BarChart3,
+}
+
+const actionIcons = {
+  DollarSign,
+  FileText,
+  Building2,
+}
+
+const cardsData = cardsJson.map((card) => ({
+  ...card,
+  icon: cardIcons[card.icon],
+}))
+
+const quickActions = actionsJson.map((action) => ({
+  ...action,
+  icon: actionIcons[action.icon],
+}))
 
 function Apartments() {
   const [selectedRecord, setSelectedRecord] = useState(null)
@@ -112,6 +149,14 @@ function Apartments() {
 
   return (
     <>
+      <TopNavigationComponent
+        organizationName={navData.organizationName}
+        notificationCount={navData.notificationCount}
+      />
+      <InformationCardsComponent
+        cardsData={cardsData}
+        adminName={navData.adminName}
+      />
       <SummaryComponent values={[120, 78, 28, 14, 92]} />
       <div className="apartments_table">
         <TableComponent
@@ -120,6 +165,7 @@ function Apartments() {
           columns={columns}
           data={exampleData}
         />
+        <QuickActionsComponent actions={quickActions} />
       </div>
       {selectedRecord && (
         <div className="apartments-modal-overlay" onClick={closeModal}>
