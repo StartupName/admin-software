@@ -12,6 +12,7 @@ import Apartments from './modules/apartments/Apartments'
 import Wallet from './modules/wallet/Wallet'
 import Payments from './modules/payments/Payments'
 import Expenses from './modules/expenses/Expenses'
+import LandingPage from './modules/landing/LandingPage'
 
 
 function Layout(){
@@ -36,8 +37,8 @@ function App() {
     return (
         <BrowserRouter>
             <Routes>
+                <Route path="/" element={<LandingPage />} />
                 <Route path="/" element={<Layout />}>
-                    <Route index element={<>Home</>} />
                     <Route path="dashboard" element={<DashBoard />} />
                     <Route path="apartments" element={<Apartments />} />
                     <Route path="payments" element={<Payments />} />
