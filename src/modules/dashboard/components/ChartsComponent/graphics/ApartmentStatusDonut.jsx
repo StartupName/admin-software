@@ -1,8 +1,21 @@
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
+// Required when this donut is used outside ChartsComponent (e.g. Expenses/Payments):
+// donutCard / centerLabel styles live in ChartsComponent.css.
+import '../ChartsComponent.css'
 
-// Donut chart is reusable: data and legend position are received via props
-// Legend position controls layout through CSS class legend-${legendPosition}
-export default function ApartmentStatusDonut({ data, legendPosition = "right", title = "Estado de apartamentos", style }) {
+// Donut chart is reusable: data, title, legend position and center labels
+// are received via props. centerValue/centerLabel are a minimal addition so
+// Expenses (and other modules) can show custom center text; defaults preserve
+// Dashboard behavior (computed total + "Apartamentos"). Identical to open PR #100
+// so the merge conflict on this file is trivial/identical.
+export default function ApartmentStatusDonut({
+  data,
+  legendPosition = "right",
+  title = "Estado de apartamentos",
+  style,
+  centerValue,
+  centerLabel = "Apartamentos",
+}) {
   const total = data.reduce((acc, cur) => acc + cur.value, 0)
 
   return (
@@ -29,8 +42,8 @@ export default function ApartmentStatusDonut({ data, legendPosition = "right", t
           </ResponsiveContainer>
 
           <div className="centerLabel">
-            <span>120</span>
-            <small>Apartamentos</small>
+            <span>{centerValue ?? total}</span>
+            <small>{centerLabel}</small>
           </div>
         </div>
 
