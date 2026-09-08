@@ -8,7 +8,10 @@
     "comprobante": "FAC-1458",
     "valor": 2800000,
     "metodoPago": "Transferencia",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "27/08/2024",
@@ -19,7 +22,10 @@
     "comprobante": "FAC-1457",
     "valor": 1950000,
     "metodoPago": "Transferencia",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "26/08/2024",
@@ -30,7 +36,10 @@
     "comprobante": "FAC-1456",
     "valor": 1620000,
     "metodoPago": "Transferencia",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "23/08/2024",
@@ -41,7 +50,10 @@
     "comprobante": "FAC-1455",
     "valor": 3450000,
     "metodoPago": "Débito automático",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "20/08/2024",
@@ -52,7 +64,10 @@
     "comprobante": "FAC-1454",
     "valor": 780000,
     "metodoPago": "Tarjeta débito",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "18/08/2024",
@@ -63,7 +78,10 @@
     "comprobante": "FAC-1453",
     "valor": 950000,
     "metodoPago": "Transferencia",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "15/08/2024",
@@ -74,7 +92,10 @@
     "comprobante": "POL-2024-58",
     "valor": 4200000,
     "metodoPago": "Transferencia",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "12/08/2024",
@@ -85,7 +106,10 @@
     "comprobante": "FAC-1452",
     "valor": 210000,
     "metodoPago": "Efectivo",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "10/08/2024",
@@ -96,7 +120,10 @@
     "comprobante": "FAC-1451",
     "valor": 1250000,
     "metodoPago": "Transferencia",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "08/08/2024",
@@ -107,7 +134,10 @@
     "comprobante": "FAC-1450",
     "valor": 1380000,
     "metodoPago": "Débito automático",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "05/08/2024",
@@ -118,7 +148,10 @@
     "comprobante": "FAC-1449",
     "valor": 465000,
     "metodoPago": "Transferencia",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   },
   {
     "fecha": "02/08/2024",
@@ -129,6 +162,9 @@
     "comprobante": "FAC-1448",
     "valor": 325000,
     "metodoPago": "Tarjeta débito",
-    "acciones": ["opciones"]
+    "acciones": [
+      "ver",
+      "opciones"
+    ]
   }
 ]

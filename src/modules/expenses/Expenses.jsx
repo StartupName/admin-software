@@ -56,8 +56,7 @@ export default function Expenses(){
                     {value}
                     <ArrowDownToLine
                         size={20}
-                        color="blue"
-                        cursor="pointer"
+                        className="expenses-download-icon"
                         onClick={download}
                     />
                 </span>
