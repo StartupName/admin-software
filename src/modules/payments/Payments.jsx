@@ -100,8 +100,7 @@ export default function Payments(){
                     {value ? (
                         <ArrowDownToLine
                             size={20}
-                            color="blue"
-                            cursor="pointer"
+                            className="payments-download-icon"
                             onClick={download}
                         />
                     ) : null}
@@ -167,21 +166,23 @@ export default function Payments(){
                 adminName={navData.adminName}
                 showDatePicker={false}
             />
-            <div className="payments-table">
-                <TableComponent
-                    icon={<FileText />}
-                    title={"Historial de pagos"}
-                    columns={columns}
-                    data={tableData}
-                />
-                <ApartmentStatusDonut
-                    data={chartData.data}
-                    title={chartData.title}
-                    legendPosition={chartData.legendPosition}
-                    centerValue={chartData.centerValue}
-                    centerLabel={chartData.centerLabel}
-                />
-                <QuickActionsComponent actions={quickActions} />
+            <div className="payments-body">
+                <div className="payments-table">
+                    <TableComponent
+                        icon={<FileText />}
+                        title={"Historial de pagos"}
+                        columns={columns}
+                        data={tableData}
+                    />
+                    <ApartmentStatusDonut
+                        data={chartData.data}
+                        title={chartData.title}
+                        legendPosition={chartData.legendPosition}
+                        centerValue={chartData.centerValue}
+                        centerLabel={chartData.centerLabel}
+                    />
+                </div>
+                <QuickActionsComponent actions={quickActions} className="payments-quick-actions" />
             </div>
             {selectedRecord && (
                 <div className="payments-modal-overlay" onClick={closeModal}>
