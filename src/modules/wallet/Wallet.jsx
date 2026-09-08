@@ -3,14 +3,18 @@ import './Wallet.css'
 import TopNavigationComponent from '../dashboard/components/topNavigationComponent/topNavigationComponent'
 import InformationCardsComponent from '../dashboard/components/InformationCardsComponent/InformationCardsComponent'
 import cardsData from './components/InformationCardsComponent/example_data'
+import navData from './components/topNavigationComponent/example_data.json'
 
 export default function Wallet(){
     return (
         <>
-            <TopNavigationComponent organizationName="Altos del Parque" />
+            <TopNavigationComponent
+                organizationName={navData.organizationName}
+                notificationCount={navData.notificationCount}
+            />
             <InformationCardsComponent
                 cardsData={cardsData}
-                adminName="Laura"
+                adminName={navData.adminName}
                 showDatePicker={false}
             />
             <div className="wallet-table">
