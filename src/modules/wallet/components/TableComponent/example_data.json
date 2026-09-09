@@ -1,0 +1,122 @@
+[
+  {
+    "apartamento": "Apto 301",
+    "propietario": "Jorge Mario Salazar",
+    "conceptoPendiente": "Administración Agosto",
+    "vencimiento": "10/08/2024",
+    "diasEnMora": 21,
+    "saldoPendiente": 350000,
+    "estado": "En mora",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 502",
+    "propietario": "Juliana Torres",
+    "conceptoPendiente": "Administración Agosto",
+    "vencimiento": "10/08/2024",
+    "diasEnMora": 21,
+    "saldoPendiente": 350000,
+    "estado": "En mora",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 401",
+    "propietario": "Andrés Felipe Cano",
+    "conceptoPendiente": "Administración Agosto",
+    "vencimiento": "15/08/2024",
+    "diasEnMora": 16,
+    "saldoPendiente": 350000,
+    "estado": "Pendiente",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 201",
+    "propietario": "Carlos Andrés Ruiz",
+    "conceptoPendiente": "Administración Agosto",
+    "vencimiento": "15/08/2024",
+    "diasEnMora": 16,
+    "saldoPendiente": 150000,
+    "estado": "Pendiente",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 701",
+    "propietario": "Esteban Correa",
+    "conceptoPendiente": "Administración Agosto",
+    "vencimiento": "20/08/2024",
+    "diasEnMora": 11,
+    "saldoPendiente": 350000,
+    "estado": "Pendiente",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 102",
+    "propietario": "Camila Restrepo G.",
+    "conceptoPendiente": "Administración Agosto",
+    "vencimiento": "31/08/2024",
+    "diasEnMora": 0,
+    "saldoPendiente": 350000,
+    "estado": "Pendiente",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 602",
+    "propietario": "Isabella Franco",
+    "conceptoPendiente": "Administración Agosto",
+    "vencimiento": "31/08/2024",
+    "diasEnMora": 0,
+    "saldoPendiente": 350000,
+    "estado": "Pendiente",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 801",
+    "propietario": "Tomás Valencia",
+    "conceptoPendiente": "Administración Agosto",
+    "vencimiento": "31/08/2024",
+    "diasEnMora": 0,
+    "saldoPendiente": 350000,
+    "estado": "Pendiente",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 403",
+    "propietario": "Felipe Restrepo Vélez",
+    "conceptoPendiente": "Parqueadero Agosto",
+    "vencimiento": "18/08/2024",
+    "diasEnMora": 13,
+    "saldoPendiente": 80000,
+    "estado": "En mora",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 503",
+    "propietario": "Mateo Arango",
+    "conceptoPendiente": "Cuota extraordinaria",
+    "vencimiento": "25/08/2024",
+    "diasEnMora": 6,
+    "saldoPendiente": 150000,
+    "estado": "Pendiente",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 204",
+    "propietario": "Valentina Herrera",
+    "conceptoPendiente": "Administración Agosto",
+    "vencimiento": "12/08/2024",
+    "diasEnMora": 19,
+    "saldoPendiente": 350000,
+    "estado": "En mora",
+    "acciones": ["ver", "opciones"]
+  },
+  {
+    "apartamento": "Apto 603",
+    "propietario": "Mauricio Echeverri",
+    "conceptoPendiente": "Parqueadero Agosto",
+    "vencimiento": "31/08/2024",
+    "diasEnMora": 0,
+    "saldoPendiente": 80000,
+    "estado": "Pendiente",
+    "acciones": ["ver", "opciones"]
+  }
+]

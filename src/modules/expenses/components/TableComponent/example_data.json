@@ -1,0 +1,134 @@
+[
+  {
+    "fecha": "28/08/2024",
+    "concepto": "Servicio de vigilancia",
+    "detalle": "Julio 2024",
+    "categoria": "Servicios",
+    "proveedor": "Seguridad Total Ltda.",
+    "comprobante": "FAC-1458",
+    "valor": 2800000,
+    "metodoPago": "Transferencia",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "27/08/2024",
+    "concepto": "Mantenimiento ascensor",
+    "detalle": "Servicio mensual",
+    "categoria": "Mantenimiento",
+    "proveedor": "Ascensores S.A.S.",
+    "comprobante": "FAC-1457",
+    "valor": 1950000,
+    "metodoPago": "Transferencia",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "26/08/2024",
+    "concepto": "Aseo zonas comunes",
+    "detalle": "Julio 2024",
+    "categoria": "Servicios",
+    "proveedor": "Limpieza Profesional",
+    "comprobante": "FAC-1456",
+    "valor": 1620000,
+    "metodoPago": "Transferencia",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "23/08/2024",
+    "concepto": "Energía eléctrica",
+    "detalle": "Zonas comunes",
+    "categoria": "Servicios Públicos",
+    "proveedor": "EPM",
+    "comprobante": "FAC-1455",
+    "valor": 3450000,
+    "metodoPago": "Débito automático",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "20/08/2024",
+    "concepto": "Productos de aseo",
+    "detalle": null,
+    "categoria": "Suministros",
+    "proveedor": "Distribuidora Clean",
+    "comprobante": "FAC-1454",
+    "valor": 780000,
+    "metodoPago": "Tarjeta débito",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "18/08/2024",
+    "concepto": "Jardinería",
+    "detalle": "Mantenimiento mensual",
+    "categoria": "Mantenimiento",
+    "proveedor": "Verde Vivo Jardines",
+    "comprobante": "FAC-1453",
+    "valor": 950000,
+    "metodoPago": "Transferencia",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "15/08/2024",
+    "concepto": "Seguro del edificio",
+    "detalle": "Anual",
+    "categoria": "Seguros",
+    "proveedor": "Seguros Bolívar",
+    "comprobante": "POL-2024-58",
+    "valor": 4200000,
+    "metodoPago": "Transferencia",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "12/08/2024",
+    "concepto": "Papelería y oficina",
+    "detalle": null,
+    "categoria": "Administrativos",
+    "proveedor": "Papelería El Punto",
+    "comprobante": "FAC-1452",
+    "valor": 210000,
+    "metodoPago": "Efectivo",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "10/08/2024",
+    "concepto": "Mantenimiento de bombas",
+    "detalle": "Revisión preventiva",
+    "categoria": "Mantenimiento",
+    "proveedor": "Hidrosistemas S.A.S.",
+    "comprobante": "FAC-1451",
+    "valor": 1250000,
+    "metodoPago": "Transferencia",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "08/08/2024",
+    "concepto": "Servicio de acueducto",
+    "detalle": "Zonas comunes",
+    "categoria": "Servicios Públicos",
+    "proveedor": "EPM",
+    "comprobante": "FAC-1450",
+    "valor": 1380000,
+    "metodoPago": "Débito automático",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "05/08/2024",
+    "concepto": "Reparación puerta principal",
+    "detalle": "Cambio de cerradura",
+    "categoria": "Mantenimiento",
+    "proveedor": "Cerrajería Segura",
+    "comprobante": "FAC-1449",
+    "valor": 465000,
+    "metodoPago": "Transferencia",
+    "acciones": ["opciones"]
+  },
+  {
+    "fecha": "02/08/2024",
+    "concepto": "Insumos administrativos",
+    "detalle": "Material de oficina",
+    "categoria": "Administrativos",
+    "proveedor": "Suministros Office",
+    "comprobante": "FAC-1448",
+    "valor": 325000,
+    "metodoPago": "Tarjeta débito",
+    "acciones": ["opciones"]
+  }
+]

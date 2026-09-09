@@ -62,22 +62,24 @@ Data fetching, transformation, and integration will be handled in higher-level l
 
 ![Filters Section](./filtersComponent.png)
 
-This component represents a key section of the table of contents.
 
-Certain elements in this prototype should not be rendered, as they do not align with the software requirements:
+To understand this component and how we will work with it, let's look at it this way:
 
-* `Torre/Bloque` and its corresponding input
-* `Estado de ocupación` and its corresponding input
-* `Más filtros` and its corresponding input
+By examining the image, we can identify a small section within each component that contains a title:
 
-Instead, the elements that *should* be included are those not excluded above, plus the following:
+![Auxiliary Image](./auxiliaryImages/filterAuxiliary.jpg)
 
-* `Piso` and its corresponding input
-* `Aplicar` and its corresponding button.
+...and a selection input:
 
-[`Piso` refers to the building's floors]
+![Auxiliary Image](./auxiliaryImages/filterAuxiliary2.jpg)
 
-The default data displayed in these inputs will initially be provided via test data; subsequently, this will be replaced by real data from the server.
+This pattern:
+
+![Auxiliary Image](./auxiliaryImages/filterAuxiliary3.jpg)
+
+...will be repeated multiple times throughout the prototype; therefore, we need a way to automatically pass in both the title and the list to be rendered in the selection input.
+
+---
 
 Clicking the `Aplicar` button triggers the proposed filters; this specific action must also execute the function that queries the database.
 

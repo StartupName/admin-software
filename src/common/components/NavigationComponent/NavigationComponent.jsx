@@ -1,7 +1,10 @@
 import { ChevronsLeft, ChevronLeft, ChevronRight, ChevronsRight, ChevronDown } from 'lucide-react'
 import './NavigationComponent.css'
 
-export default function NavigationComponent() {
+export default function NavigationComponent({showComponent = true}) {
+  if (!showComponent) {
+    return (<></>)
+  }
   return (
     <nav className="apartments-nav">
       <p className="apartments-nav__info">Mostrando 1 a 8 de 120 unidades</p>

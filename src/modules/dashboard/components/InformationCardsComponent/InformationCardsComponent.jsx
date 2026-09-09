@@ -1,12 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
+import defaultData from "./data/example_data";
 import {
-  DollarSign,
-  Wallet,
-  AlertTriangle,
-  ShoppingCart,
-  BarChart3,
   Calendar,
-  ChevronDown,
+  ChevronDown
 } from "lucide-react";
 import "./InformationCardsComponent.css";
 
@@ -95,49 +91,10 @@ function MultiDatePicker({ availableDates, selectedDate, onChange }) {
 /* ------------------------------------------------------------------ */
 /*  AdminSummary: ensambla todo, adminName llega por prop              */
 /* ------------------------------------------------------------------ */
-function AdminSummary({ adminName, showDatePicker = true }) {
+function AdminSummary({ cardsData, adminName, showDatePicker = true }) {
   // Datos de prueba para el selector de fechas (por ahora, un array estático)
   const testDates = ["Junio 2024", "Julio 2024", "Agosto 2024", "Septiembre 2024"];
   const [selectedDate, setSelectedDate] = useState("Agosto 2024");
-
-  // Datos de prueba para las tarjetas — en un caso real vendrían de una API
-  const cardsData = [
-    {
-      id: "recaudo",
-      icon: DollarSign,
-      title: "Recaudo del mes",
-      value: "$ 24.350.000",
-      circleColor: "#10B981",
-    },
-    {
-      id: "cartera-pendiente",
-      icon: Wallet,
-      title: "Cartera pendiente",
-      value: "$ 8.650.000",
-      circleColor: "#F59E0B",
-    },
-    {
-      id: "cartera-vencida",
-      icon: AlertTriangle,
-      title: "Cartera vencida",
-      value: "$ 3.250.000",
-      circleColor: "#EF4444",
-    },
-    {
-      id: "gastos",
-      icon: ShoppingCart,
-      title: "Gastos del mes",
-      value: "$ 18.240.000",
-      circleColor: "#3B82F6",
-    },
-    {
-      id: "balance",
-      icon: BarChart3,
-      title: "Balance del mes",
-      value: "$ 6.110.000",
-      circleColor: "#8B5CF6",
-    },
-  ];
 
   return (
     <div className="dashboard">
@@ -175,8 +132,8 @@ function AdminSummary({ adminName, showDatePicker = true }) {
   );
 }
 
- function InformationCardsComponent({ adminName, showDatePicker = true }) {
-  return <AdminSummary adminName={adminName} showDatePicker={showDatePicker} />;
+ function InformationCardsComponent({ cardsData = defaultData, adminName, showDatePicker = true }) {
+  return <AdminSummary cardsData={cardsData} adminName={adminName} showDatePicker={showDatePicker} />;
 }
 
 export default InformationCardsComponent

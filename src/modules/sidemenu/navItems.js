@@ -10,10 +10,10 @@ import {
 } from 'lucide-react'
 
 export const navItems = [
-  { to: '/dashboard', label: 'Dashboard', icon: House },
+  { to: '/dashboard', label: 'Panel principal', icon: House },
   { to: '/apartments', label: 'Apartamentos', icon: Building2 },
   { to: '/payments', label: 'Pagos', icon: CreditCard },
-  { to: '/portfolio', label: 'Cartera', icon: Wallet },
+  { to: '/wallet', label: 'Cartera', icon: Wallet },
   { to: '/expenses', label: 'Gastos', icon: ShoppingBag },
   { to: '/reports', label: 'Reportes', icon: BarChart3 },
   { to: '/communications', label: 'Comunicaciones', icon: MessageCircle },

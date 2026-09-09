@@ -1,0 +1,8 @@
+.payments-table{
+    min-height: 0;
+    margin: 10px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+}
