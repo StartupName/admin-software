@@ -1,0 +1,5 @@
+[
+  { "name": "Al día", "value": 78, "color": "#22c55e" },
+  { "name": "Pendientes", "value": 28, "color": "#eab308" },
+  { "name": "En mora", "value": 14, "color": "#ef4444" }
+]
