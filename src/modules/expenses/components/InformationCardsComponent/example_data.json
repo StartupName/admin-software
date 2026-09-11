@@ -1,36 +1,36 @@
 [
   {
-    "id": "recaudo",
+    "id": "monthly-collection",
     "icon": "DollarSign",
-    "title": "Recaudo del mes",
+    "title": "Monthly collection",
     "value": "$ 24.350.000",
     "circleColor": "#10B981"
   },
   {
-    "id": "cartera-pendiente",
+    "id": "pending-receivables",
     "icon": "Wallet",
-    "title": "Cartera pendiente",
+    "title": "Pending receivables",
     "value": "$ 8.650.000",
     "circleColor": "#F59E0B"
   },
   {
-    "id": "cartera-vencida",
+    "id": "overdue-receivables",
     "icon": "AlertTriangle",
-    "title": "Cartera vencida",
+    "title": "Overdue receivables",
     "value": "$ 3.250.000",
     "circleColor": "#EF4444"
   },
   {
-    "id": "gastos",
+    "id": "monthly-expenses",
     "icon": "ShoppingCart",
-    "title": "Gastos del mes",
+    "title": "Monthly expenses",
     "value": "$ 18.240.000",
     "circleColor": "#3B82F6"
   },
   {
-    "id": "balance",
+    "id": "monthly-balance",
     "icon": "BarChart3",
-    "title": "Balance del mes",
+    "title": "Monthly balance",
     "value": "$ 6.110.000",
     "circleColor": "#8B5CF6"
   }

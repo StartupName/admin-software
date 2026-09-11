@@ -1,19 +1,19 @@
 [
   {
     "id": 1,
-    "title": "Registrar gasto",
+    "title": "Register expense",
     "icon": "Plus",
     "color": "#3B82F6"
   },
   {
     "id": 2,
-    "title": "Subir soporte",
+    "title": "Upload supporting docs",
     "icon": "FileUp",
     "color": "#22C55E"
   },
   {
     "id": 3,
-    "title": "Ver reportes",
+    "title": "View reports",
     "icon": "FileText",
     "color": "#8B5CF6"
   }

@@ -55,7 +55,7 @@ export default function Expenses(){
                 showDatePicker={false}
             />
             <div className="expenses-table">
-                {/* Put the table componente here */}
+                {/* Put the table component here */}
                 <QuickActionsComponent actions={quickActions} />
             </div>
         </>
