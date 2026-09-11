@@ -20,7 +20,7 @@ function Wallet() {
     })
   }
 
-  function money_changer(value, convert = false, type = 'es-CO') {
+  function money_changer(value, convert = false, type = 'en-US') {
     if (!convert) {
       return value
     }
@@ -41,14 +41,14 @@ function Wallet() {
     })
   }
 
-  changeStyle(columns, 'estado', (value) =>
-    value === 'Al día'
+  changeStyle(columns, 'status', (value) =>
+    value === 'Up to date'
       ? 'wallet-uptodate'
-      : value === 'Pendiente'
+      : value === 'Pending'
         ? 'wallet-pending'
         : 'wallet-delay'
   )
-  changeStyle(columns, 'saldoPendiente', (value) =>
+  changeStyle(columns, 'pendingBalance', (value) =>
     value === 0
       ? 'wallet-debt-free'
       : value > 0 && value <= 35000
@@ -56,16 +56,16 @@ function Wallet() {
         : 'wallet-indebted',
     true
   )
-  changeStyle(columns, 'apartamento', () => 'wallet-apartment-title')
-  changeStyle(columns, 'diasEnMora', (value) =>
+  changeStyle(columns, 'apartment', () => 'wallet-apartment-title')
+  changeStyle(columns, 'daysOverdue', (value) =>
     value > 0 ? 'wallet-days-overdue' : 'wallet-days-ok'
   )
 
   columns.map((object) => {
-    if (object.key === 'acciones') {
+    if (object.key === 'actions') {
       object.render = (value, row) => (
         <div className="wallet-row-actions">
-          {Array.isArray(value) && value.includes('ver') && (
+          {Array.isArray(value) && value.includes('view') && (
             <button
               type="button"
               className="wallet-eye"
@@ -74,7 +74,7 @@ function Wallet() {
               <Eye size={16} />
             </button>
           )}
-          {Array.isArray(value) && value.includes('opciones') && (
+          {Array.isArray(value) && value.includes('options') && (
             <button
               type="button"
               className="wallet-more-options"
@@ -112,7 +112,7 @@ function Wallet() {
       <div className="wallet-table">
         <TableComponent
           icon={<WalletIcon />}
-          title={"Cartera"}
+          title={"Wallet"}
           columns={columns}
           data={exampleData}
         />
