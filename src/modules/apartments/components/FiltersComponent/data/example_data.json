@@ -1,0 +1,15 @@
+{
+  "search": {
+    "label": "Buscar",
+    "placeholder": "Buscar...",
+    "defaultValue": ""
+  },
+  "filters": [
+    {
+      "id": "estadoFinanciero",
+      "label": "Estado financiero",
+      "options": ["Todos", "Al día", "Pendiente", "En mora"],
+      "defaultValue": "Todos"
+    }
+  ]
+}
