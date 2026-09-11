@@ -1,2 +1,2 @@
-# admin-software
+# Enjadmin
 Management software designed to effectively handle administrative tasks in gated communities or public facilities, prioritizing agility, ease of use, intuitiveness, and process centralization.
