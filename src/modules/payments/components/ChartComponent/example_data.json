@@ -1,11 +1,11 @@
 {
-  "title": "Resumen del mes",
-  "centerValue": "$ 24.350.000",
-  "centerLabel": "Total recaudo",
+  "title": "Month summary",
+  "centerValue": "$ 24,350,000",
+  "centerLabel": "Total collected",
   "legendPosition": "bottom",
   "data": [
-    { "name": "Administración", "value": 22750000, "color": "#22C55E" },
-    { "name": "Parqueaderos", "value": 1300000, "color": "#3B82F6" },
-    { "name": "Otros conceptos", "value": 300000, "color": "#EF4444" }
+    { "name": "Administration", "value": 22750000, "color": "#22C55E" },
+    { "name": "Parking", "value": 1300000, "color": "#3B82F6" },
+    { "name": "Other concepts", "value": 300000, "color": "#EF4444" }
   ]
 }
