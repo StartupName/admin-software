@@ -1,0 +1,12 @@
+{
+  "title": "Top 5 suppliers",
+  "yearLabel": "Year",
+  "viewAllLabel": "View all suppliers",
+  "suppliers": [
+    { "id": "seguridad-total", "name": "Seguridad Total Ltda.", "amount": 22400000 },
+    { "id": "epm", "name": "EPM", "amount": 18950000 },
+    { "id": "ascensores", "name": "Ascensores S.A.S.", "amount": 14600000 },
+    { "id": "limpieza", "name": "Limpieza Profesional", "amount": 13200000 },
+    { "id": "verde-vivo", "name": "Verde Vivo Jardines", "amount": 6750000 }
+  ]
+}

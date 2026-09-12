@@ -1,0 +1,92 @@
+.top-suppliers {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 420px;
+  min-width: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.top-suppliers__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.3;
+}
+
+.top-suppliers__year {
+  margin-left: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.top-suppliers__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.top-suppliers__row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  min-width: 0;
+}
+
+.top-suppliers__name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f2937;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.top-suppliers__amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.top-suppliers__view-all {
+  align-self: flex-start;
+  margin: 4px 0 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+}
+
+.top-suppliers__view-all:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.top-suppliers__view-all:active {
+  color: #1e40af;
+}
+
+@media (max-width: 720px) {
+  .top-suppliers {
+    max-width: 100%;
+  }
+}
