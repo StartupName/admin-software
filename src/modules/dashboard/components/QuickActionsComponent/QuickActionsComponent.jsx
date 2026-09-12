@@ -31,7 +31,7 @@ function QuickActionCard({ icon: Icon, title, color }) {
 
 
 export default function QuickActionsComponent({ actions = defaultQuickActions }) {
-  const visibleActions = actions.slice(0, 6);
+  // Render every supplied record so reuse supports JSON lists of any length.
 
   return (
     <div className="quick-actions-container">
@@ -41,7 +41,7 @@ export default function QuickActionsComponent({ actions = defaultQuickActions })
       </h2>
 
       <div className="quick-actions-grid">
-        {visibleActions.map((action, index) => (
+        {actions.map((action, index) => (
           <QuickActionCard
             key={action.id ?? index}
             icon={action.icon}
