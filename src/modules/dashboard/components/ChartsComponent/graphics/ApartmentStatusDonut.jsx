@@ -2,9 +2,9 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 
 // Donut chart is reusable: data and legend position are received via props
 // Legend position controls layout through CSS class legend-${legendPosition}
-// Reuse: title and data are passed via props (Apartment status per 7.2, no View details)
+// Reuse: title, data and center label are passed via props (Apartment status per 7.2, Distribución de cartera per wallet.png)
 // so the component can be reused in wallet/payments without hardcoding
-export default function ApartmentStatusDonut({ data, legendPosition = "right", title = "Apartment status", style }) {
+export default function ApartmentStatusDonut({ data, legendPosition = "right", title = "Apartment status", centerLabel = "Total", style }) {
   const total = data.reduce((acc, cur) => acc + cur.value, 0)
 
   return (
@@ -31,8 +31,8 @@ export default function ApartmentStatusDonut({ data, legendPosition = "right", t
           </ResponsiveContainer>
 
           <div className="centerLabel">
-            <span>{total}</span>
-            <small>Apartamentos</small>
+            <span>{total >= 1000 ? `$ ${total.toLocaleString('es-CO')}` : total}</span>
+            <small>{centerLabel}</small>
           </div>
         </div>
 

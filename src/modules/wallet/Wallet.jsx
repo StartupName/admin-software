@@ -7,7 +7,7 @@ export default function Wallet(){
         <div className="wallet">
             <div className="wallet-table">
                 <h1>Cartera</h1>
-                <ApartmentStatusDonut data={chartData} legendPosition="right" title="Apartment status" />
+                <ApartmentStatusDonut data={chartData} legendPosition="right" title="Distribución de cartera" centerLabel="Total" />
             </div>
         </div>
     )

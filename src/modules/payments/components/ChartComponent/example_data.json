@@ -1,5 +1,5 @@
 [
-  { "name": "Al día", "value": 78, "color": "#22c55e" },
-  { "name": "Pendientes", "value": 28, "color": "#eab308" },
-  { "name": "En mora", "value": 14, "color": "#ef4444" }
+  { "name": "En mora", "value": 3250000, "color": "#EF4444" },
+  { "name": "Pendiente", "value": 8650000, "color": "#EAB308" },
+  { "name": "Al día", "value": 0, "color": "#22C55E" }
 ]
