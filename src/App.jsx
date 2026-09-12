@@ -12,6 +12,7 @@ import Apartments from './modules/apartments/Apartments'
 import Wallet from './modules/wallet/Wallet'
 import Payments from './modules/payments/Payments'
 import Expenses from './modules/expenses/Expenses'
+import Reports from './modules/reports/Reports'
 
 
 function Layout(){
@@ -43,7 +44,7 @@ function App() {
                     <Route path="payments" element={<Payments />} />
                     <Route path="wallet" element={<Wallet />} />
                     <Route path="expenses" element={<Expenses />} />
-                    <Route path="reports" element={<SectionPlaceholder title="Reportes" />} />
+                    <Route path="reports" element={<Reports />} />
                     <Route path="communications" element={<SectionPlaceholder title="Comunicaciones" />} />
                     <Route path="users" element={<SectionPlaceholder title="Usuarios y roles" />} />
                 </Route>
