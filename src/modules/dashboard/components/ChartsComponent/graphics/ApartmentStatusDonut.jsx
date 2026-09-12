@@ -2,7 +2,10 @@ import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 
 // Donut chart is reusable: data and legend position are received via props
 // Legend position controls layout through CSS class legend-${legendPosition}
-export default function ApartmentStatusDonut({ data, legendPosition = "right", title = "Estado de apartamentos", style }) {
+// NOTE (reuse): centerValue, centerLabel and formatValue are optional props
+// added so other modules (e.g. expenses) can reuse this donut with their own
+// center text and money formatting. Defaults keep the dashboard unchanged.
+export default function ApartmentStatusDonut({ data, legendPosition = "right", title = "Estado de apartamentos", style, centerValue = "120", centerLabel = "Apartamentos", formatValue = (value) => value }) {
   const total = data.reduce((acc, cur) => acc + cur.value, 0)
 
   return (
@@ -29,8 +32,8 @@ export default function ApartmentStatusDonut({ data, legendPosition = "right", t
           </ResponsiveContainer>
 
           <div className="centerLabel">
-            <span>120</span>
-            <small>Apartamentos</small>
+            <span>{centerValue}</span>
+            <small>{centerLabel}</small>
           </div>
         </div>
 
@@ -43,7 +46,7 @@ export default function ApartmentStatusDonut({ data, legendPosition = "right", t
                 <div className="pieLegendText">
                   <strong>{item.name}</strong>
                   <span>
-                    {item.value} ({pct}%)
+                    {formatValue(item.value)} ({pct}%)
                   </span>
                 </div>
               </li>
