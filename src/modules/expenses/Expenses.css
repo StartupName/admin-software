@@ -3,6 +3,7 @@
     margin: 10px 24px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 16px;
     align-items: flex-start;
 }
@@ -13,28 +14,73 @@
     min-width: 0;
 }
 
+/* Designer compact .donutCard: sit beside the table, do not stretch to table height.
+   Shared .chartCard uses height:100% / width:100%; override here only for Expenses. */
 .expenses-table > .donutCard{
     flex-shrink: 0;
-    width: 340px;
+    width: 320px;
     max-width: 100%;
+    height: auto;
+    align-self: flex-start;
 }
 
-.transfer, .cash{
+/* Concepto + detalle in one cell (prototype: title + grey subtitle). */
+.expenses-concepto{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+
+.expenses-concepto__title{
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.expenses-concepto__detalle{
+    font-size: 12px;
+    color: #94a3b8;
+    line-height: 1.2;
+}
+
+/* Method badges — distinct colors per método (Transferencia, Débito automático, Tarjeta débito, Efectivo). */
+.method-transferencia,
+.method-debito-automatico,
+.method-tarjeta-debito,
+.method-efectivo,
+.method-default{
+    display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 12px;
     font-weight: 600;
     text-align: center;
+    white-space: nowrap;
 }
 
-.transfer{
+.method-transferencia{
+    background-color: #E7F7EC;
+    color: #3A9B5F;
+}
+
+.method-debito-automatico{
+    background-color: #F3E8FF;
+    color: #7C3AED;
+}
+
+.method-tarjeta-debito{
     background-color: #E3F0FF;
     color: #2F80C9;
 }
 
-.cash{
-    background-color: #E7F7EC;
-    color: #3A9B5F;
+.method-efectivo{
+    background-color: #FEF3C7;
+    color: #B45309;
+}
+
+.method-default{
+    background-color: #F1F5F9;
+    color: #475569;
 }
 
 .layout{

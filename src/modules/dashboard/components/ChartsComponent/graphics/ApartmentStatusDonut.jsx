@@ -8,6 +8,9 @@ import '../ChartsComponent.css'
 // Expenses (and other modules) can show custom center text; defaults preserve
 // Dashboard behavior (computed total + "Apartments"). Align with payments #100
 // so the merge conflict on this file is trivial/identical.
+//
+// Shared change (Expenses #82 / Designer): optional valueFormatter lets modules
+// format legend amounts (e.g. currency) without changing Dashboard's raw numbers.
 export default function ApartmentStatusDonut({
   data,
   legendPosition = "right",
@@ -15,6 +18,7 @@ export default function ApartmentStatusDonut({
   style,
   centerValue,
   centerLabel = "Apartments",
+  valueFormatter,
 }) {
   const total = data.reduce((acc, cur) => acc + cur.value, 0)
 
@@ -50,13 +54,16 @@ export default function ApartmentStatusDonut({
         <ul className="pieLegend">
           {data.map((item) => {
             const pct = Math.round((item.value / total) * 100)
+            const displayValue = valueFormatter
+              ? valueFormatter(item.value)
+              : item.value
             return (
               <li key={item.name}>
                 <i className="dot" style={{ background: item.color }} />
                 <div className="pieLegendText">
                   <strong>{item.name}</strong>
                   <span>
-                    {item.value} ({pct}%)
+                    {displayValue} ({pct}%)
                   </span>
                 </div>
               </li>

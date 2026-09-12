@@ -1,170 +1,134 @@
 [
   {
-    "date": "28/08/2024",
-    "concept": "Security service",
-    "detail": "July 2024",
-    "category": "Services",
-    "supplier": "Seguridad Total Ltda.",
-    "receipt": "FAC-1458",
-    "amount": 2800000,
-    "method": "Transfer",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "28/08/2024",
+    "concepto": "Servicio de vigilancia",
+    "detalle": "Julio 2024",
+    "categoria": "Servicios",
+    "proveedor": "Seguridad Total Ltda.",
+    "comprobante": "FAC-1458",
+    "valor": 2800000,
+    "metodo": "Transferencia",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "27/08/2024",
-    "concept": "Elevator maintenance",
-    "detail": "Monthly service",
-    "category": "Maintenance",
-    "supplier": "Ascensores S.A.S.",
-    "receipt": "FAC-1457",
-    "amount": 1950000,
-    "method": "Transfer",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "27/08/2024",
+    "concepto": "Mantenimiento ascensor",
+    "detalle": "Servicio mensual",
+    "categoria": "Mantenimiento",
+    "proveedor": "Ascensores S.A.S.",
+    "comprobante": "FAC-1457",
+    "valor": 1950000,
+    "metodo": "Transferencia",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "26/08/2024",
-    "concept": "Common areas cleaning",
-    "detail": "July 2024",
-    "category": "Services",
-    "supplier": "Professional Cleaning",
-    "receipt": "FAC-1456",
-    "amount": 1620000,
-    "method": "Transfer",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "26/08/2024",
+    "concepto": "Aseo zonas comunes",
+    "detalle": "Julio 2024",
+    "categoria": "Servicios",
+    "proveedor": "Limpieza Profesional",
+    "comprobante": null,
+    "valor": 1620000,
+    "metodo": "Transferencia",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "23/08/2024",
-    "concept": "Electric power",
-    "detail": "Common areas",
-    "category": "Utilities",
-    "supplier": "EPM",
-    "receipt": "FAC-1455",
-    "amount": 3450000,
-    "method": "Automatic debit",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "23/08/2024",
+    "concepto": "Energía eléctrica",
+    "detalle": "Zonas comunes",
+    "categoria": "Servicios Públicos",
+    "proveedor": "EPM",
+    "comprobante": "FAC-1455",
+    "valor": 3450000,
+    "metodo": "Débito automático",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "20/08/2024",
-    "concept": "Cleaning products",
-    "detail": null,
-    "category": "Supplies",
-    "supplier": "Distribuidora Clean",
-    "receipt": "FAC-1454",
-    "amount": 780000,
-    "method": "Debit card",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "20/08/2024",
+    "concepto": "Productos de aseo",
+    "detalle": null,
+    "categoria": "Suministros",
+    "proveedor": "Distribuidora Clean",
+    "comprobante": "FAC-1454",
+    "valor": 780000,
+    "metodo": "Tarjeta débito",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "18/08/2024",
-    "concept": "Gardening",
-    "detail": "Monthly maintenance",
-    "category": "Maintenance",
-    "supplier": "Verde Vivo Gardens",
-    "receipt": "FAC-1453",
-    "amount": 950000,
-    "method": "Transfer",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "18/08/2024",
+    "concepto": "Jardinería",
+    "detalle": "Mantenimiento mensual",
+    "categoria": "Mantenimiento",
+    "proveedor": "Verde Vivo Jardines",
+    "comprobante": "FAC-1453",
+    "valor": 950000,
+    "metodo": "Transferencia",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "15/08/2024",
-    "concept": "Building insurance",
-    "detail": "Annual",
-    "category": "Insurance",
-    "supplier": "Seguros Bolívar",
-    "receipt": "POL-2024-58",
-    "amount": 4200000,
-    "method": "Transfer",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "15/08/2024",
+    "concepto": "Seguro del edificio",
+    "detalle": "Anual",
+    "categoria": "Seguros",
+    "proveedor": "Seguros Bolívar",
+    "comprobante": "POL-2024-58",
+    "valor": 4200000,
+    "metodo": "Transferencia",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "12/08/2024",
-    "concept": "Stationery and office",
-    "detail": null,
-    "category": "Administrative",
-    "supplier": "Papelería El Punto",
-    "receipt": "FAC-1452",
-    "amount": 210000,
-    "method": "Cash",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "12/08/2024",
+    "concepto": "Papelería y oficina",
+    "detalle": null,
+    "categoria": "Administrativos",
+    "proveedor": "Papelería El Punto",
+    "comprobante": "FAC-1452",
+    "valor": 210000,
+    "metodo": "Efectivo",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "10/08/2024",
-    "concept": "Pump maintenance",
-    "detail": "Preventive inspection",
-    "category": "Maintenance",
-    "supplier": "Hidrosistemas S.A.S.",
-    "receipt": "FAC-1451",
-    "amount": 1250000,
-    "method": "Transfer",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "10/08/2024",
+    "concepto": "Mantenimiento de bombas",
+    "detalle": "Revisión preventiva",
+    "categoria": "Mantenimiento",
+    "proveedor": "Hidrosistemas S.A.S.",
+    "comprobante": "",
+    "valor": 1250000,
+    "metodo": "Transferencia",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "08/08/2024",
-    "concept": "Water utility service",
-    "detail": "Common areas",
-    "category": "Utilities",
-    "supplier": "EPM",
-    "receipt": "FAC-1450",
-    "amount": 1380000,
-    "method": "Automatic debit",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "08/08/2024",
+    "concepto": "Servicio de acueducto",
+    "detalle": "Zonas comunes",
+    "categoria": "Servicios Públicos",
+    "proveedor": "EPM",
+    "comprobante": "FAC-1450",
+    "valor": 1380000,
+    "metodo": "Débito automático",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "05/08/2024",
-    "concept": "Main door repair",
-    "detail": "Lock replacement",
-    "category": "Maintenance",
-    "supplier": "Secure Locksmith",
-    "receipt": "FAC-1449",
-    "amount": 465000,
-    "method": "Transfer",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "05/08/2024",
+    "concepto": "Reparación puerta principal",
+    "detalle": "Cambio de cerradura",
+    "categoria": "Mantenimiento",
+    "proveedor": "Cerrajería Segura",
+    "comprobante": "FAC-1449",
+    "valor": 465000,
+    "metodo": "Transferencia",
+    "acciones": ["ver", "opciones"]
   },
   {
-    "date": "02/08/2024",
-    "concept": "Administrative supplies",
-    "detail": "Office materials",
-    "category": "Administrative",
-    "supplier": "Office Supplies",
-    "receipt": "FAC-1448",
-    "amount": 325000,
-    "method": "Debit card",
-    "actions": [
-      "view",
-      "options"
-    ]
+    "fecha": "02/08/2024",
+    "concepto": "Insumos administrativos",
+    "detalle": "Material de oficina",
+    "categoria": "Administrativos",
+    "proveedor": "Suministros Office",
+    "comprobante": "FAC-1448",
+    "valor": 325000,
+    "metodo": "Tarjeta débito",
+    "acciones": ["ver", "opciones"]
   }
 ]

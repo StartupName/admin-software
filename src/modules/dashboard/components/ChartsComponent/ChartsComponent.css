@@ -116,8 +116,12 @@
 }
 
 .donutCard {
+  /* Shared change (Expenses #82 / Designer compact): height auto so the card
+     does not stretch to a tall sibling table when reused beside TableComponent.
+     Dashboard chartsGrid still stretches via align-items: stretch. */
   display: flex;
   flex-direction: column;
+  height: auto;
 }
 
 .donutTitle {

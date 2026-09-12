@@ -1,13 +1,13 @@
 {
-  "title": "Distribution by category",
-  "centerValue": "$ 18,240,000",
+  "title": "Distribución por categoría",
+  "centerValue": "$ 18.240.000",
   "centerLabel": "Total",
   "legendPosition": "right",
   "data": [
-    { "name": "Services", "value": 7840000, "color": "#8B5CF6" },
-    { "name": "Maintenance", "value": 4690000, "color": "#F97316" },
-    { "name": "Utilities", "value": 3450000, "color": "#22C55E" },
-    { "name": "Supplies", "value": 1280000, "color": "#22D3EE" },
-    { "name": "Insurance", "value": 980000, "color": "#EF4444" }
+    { "name": "Servicios", "value": 7840000, "color": "#8B5CF6" },
+    { "name": "Mantenimiento", "value": 4690000, "color": "#F97316" },
+    { "name": "Servicios Públicos", "value": 3450000, "color": "#22C55E" },
+    { "name": "Suministros", "value": 1280000, "color": "#EAB308" },
+    { "name": "Seguros", "value": 980000, "color": "#EC4899" }
   ]
 }

@@ -9,79 +9,109 @@ import ApartmentStatusDonut from '../dashboard/components/ChartsComponent/graphi
 import tableData from './components/TableComponent/example_data.json'
 import chartData from './components/ChartComponent/example_data.json'
 
+// Spanish headers (payments key pattern). Auto-capitalize would drop accents
+// and show "Metodo" instead of prototype "Método de pago".
+const HEADER_LABELS = {
+    fecha: 'Fecha',
+    concepto: 'Concepto',
+    categoria: 'Categoría',
+    proveedor: 'Proveedor',
+    comprobante: 'Comprobante',
+    valor: 'Valor',
+    metodo: 'Método de pago',
+    acciones: 'Acciones',
+}
+
+// Distinct badge classes per payment method (prototype pills).
+const METHOD_CLASS = {
+    Transferencia: 'method-transferencia',
+    'Débito automático': 'method-debito-automatico',
+    'Tarjeta débito': 'method-tarjeta-debito',
+    Efectivo: 'method-efectivo',
+}
+
+function formatCurrency(value) {
+    return `$ ${Number(value).toLocaleString('es-CO')}`
+}
+
 export default function Expenses(){
     const [selectedRecord, setSelectedRecord] = useState(null)
 
     function download(){
-        alert('Downloading file...')
+        alert('Descargando archivo...')
     }
 
     const columns = []
 
+    // Skip `detalle`: prototype shows it under concepto (title + grey subtitle),
+    // not as its own column.
     for (let element of Object.keys(tableData[0])){
+        if (element === 'detalle') continue
         columns.push({
             key: element,
-            header: element.replace(/_/g, " ").replace(/\b\w/g, (c) => c.toUpperCase()),
+            header: HEADER_LABELS[element]
+                ?? element.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
         })
     }
 
-    columns.map((object) => {
-        if (object.key === 'method') {
+    columns.forEach((object) => {
+        if (object.key === 'concepto') {
+            // Prototype: concepto title + grey detalle in the same cell.
+            object.render = (value, row) => (
+                <div className="expenses-concepto">
+                    <span className="expenses-concepto__title">{value}</span>
+                    {row?.detalle ? (
+                        <span className="expenses-concepto__detalle">{row.detalle}</span>
+                    ) : null}
+                </div>
+            )
+        }
+
+        if (object.key === 'metodo') {
             object.render = (value) => (
-                <span
-                    className={
-                        value === 'Transfer'
-                            ? 'transfer'
-                            : 'cash'
-                    }
-                >
+                <span className={METHOD_CLASS[value] ?? 'method-default'}>
                     {value}
                 </span>
             )
         }
-    })
 
-    columns.map((object) => {
-        if (object.key === 'amount') {
-            object.render = (value) => (
-                `$ ${Number(value).toLocaleString('en-US')}`
-            )
+        if (object.key === 'valor') {
+            object.render = (value) => formatCurrency(value)
         }
-    })
 
-    columns.map((object) => {
-        if (object.key === 'receipt') {
+        if (object.key === 'comprobante') {
+            // No invoice → do not show download icon (null / empty / missing).
             object.render = (value) => (
                 <span className="layout">
-                    {value}
-                    <ArrowDownToLine
-                        size={20}
-                        className="expenses-download-icon"
-                        onClick={download}
-                    />
+                    {value ? value : '—'}
+                    {value ? (
+                        <ArrowDownToLine
+                            size={20}
+                            className="expenses-download-icon"
+                            onClick={download}
+                        />
+                    ) : null}
                 </span>
             )
         }
-    })
 
-    columns.map((object) => {
-        if (object.key === 'actions') {
+        if (object.key === 'acciones') {
             object.render = (value, row) => (
                 <div className="expenses-row-actions">
-                    {Array.isArray(value) && value.includes('view') && (
+                    {Array.isArray(value) && value.includes('ver') && (
                         <button
                             type="button"
                             className="expenses-eye"
-                            aria-label="View more"
+                            aria-label="Ver más"
                         >
                             <Eye size={16} />
                         </button>
                     )}
-                    {Array.isArray(value) && value.includes('options') && (
+                    {Array.isArray(value) && value.includes('opciones') && (
                         <button
                             type="button"
                             className="expenses-more-options"
-                            aria-label="more options"
+                            aria-label="Más opciones"
                             onClick={() => setSelectedRecord(row)}
                         >
                             <EllipsisVertical size={16} />
@@ -115,7 +145,7 @@ export default function Expenses(){
             <div className="expenses-table">
                 <TableComponent
                     icon={<ShoppingBag />}
-                    title={"Expense list"}
+                    title={"Listado de gastos"}
                     columns={columns}
                     data={tableData}
                 />
@@ -125,6 +155,7 @@ export default function Expenses(){
                     legendPosition={chartData.legendPosition}
                     centerValue={chartData.centerValue}
                     centerLabel={chartData.centerLabel}
+                    valueFormatter={formatCurrency}
                 />
             </div>
             {selectedRecord && (
@@ -134,21 +165,21 @@ export default function Expenses(){
                         onClick={(event) => event.stopPropagation()}
                         role="dialog"
                         aria-modal="true"
-                        aria-label="Record options"
+                        aria-label="Opciones del registro"
                     >
                         <button
                             type="button"
                             className="expenses-modal__btn"
                             onClick={handleEdit}
                         >
-                            Edit
+                            Editar
                         </button>
                         <button
                             type="button"
                             className="expenses-modal__btn expenses-modal__btn--danger"
                             onClick={handleDelete}
                         >
-                            Delete
+                            Eliminar
                         </button>
                     </div>
                 </div>
