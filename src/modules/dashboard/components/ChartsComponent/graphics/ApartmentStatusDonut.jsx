@@ -6,15 +6,15 @@ import '../ChartsComponent.css'
 // Donut chart is reusable: data, title, legend position and center labels
 // are received via props. centerValue/centerLabel are a minimal addition so
 // Expenses (and other modules) can show custom center text; defaults preserve
-// Dashboard behavior (computed total + "Apartamentos"). Identical to open PR #100
+// Dashboard behavior (computed total + "Apartments"). Align with payments #100
 // so the merge conflict on this file is trivial/identical.
 export default function ApartmentStatusDonut({
   data,
   legendPosition = "right",
-  title = "Estado de apartamentos",
+  title = "Apartment status",
   style,
   centerValue,
-  centerLabel = "Apartamentos",
+  centerLabel = "Apartments",
 }) {
   const total = data.reduce((acc, cur) => acc + cur.value, 0)
 
