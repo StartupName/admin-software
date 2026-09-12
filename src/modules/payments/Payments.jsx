@@ -56,7 +56,7 @@ export default function Payments(){
     const [selectedRecord, setSelectedRecord] = useState(null)
 
     function download(){
-        alert('Descargando archivo...')
+        alert('Downloading file...')
     }
 
     const columns = []
@@ -69,11 +69,11 @@ export default function Payments(){
     }
 
     columns.map((object) => {
-        if (object.key === 'metodo') {
+        if (object.key === 'method') {
             object.render = (value) => (
                 <span
                     className={
-                        value === 'Transferencia'
+                        value === 'Transfer'
                             ? 'transfer'
                             : 'cash'
                     }
@@ -85,15 +85,15 @@ export default function Payments(){
     })
 
     columns.map((object) => {
-        if (object.key === 'valor') {
+        if (object.key === 'amount') {
             object.render = (value) => (
-                `$ ${Number(value).toLocaleString('es-CO')}`
+                `$ ${Number(value).toLocaleString('en-US')}`
             )
         }
     })
 
     columns.map((object) => {
-        if (object.key === 'comprobante') {
+        if (object.key === 'receipt') {
             object.render = (value) => (
                 <span className="layout">
                     {value ? value : '—'}
@@ -110,10 +110,10 @@ export default function Payments(){
     })
 
     columns.map((object) => {
-        if (object.key === 'acciones') {
+        if (object.key === 'actions') {
             object.render = (value, row) => (
                 <div className="payments-row-actions">
-                    {Array.isArray(value) && value.includes('ver') && (
+                    {Array.isArray(value) && value.includes('view') && (
                         <button
                             type="button"
                             className="payments-eye"
@@ -122,7 +122,7 @@ export default function Payments(){
                             <Eye size={16} />
                         </button>
                     )}
-                    {Array.isArray(value) && value.includes('opciones') && (
+                    {Array.isArray(value) && value.includes('options') && (
                         <button
                             type="button"
                             className="payments-more-options"
@@ -170,7 +170,7 @@ export default function Payments(){
                 <div className="payments-table">
                     <TableComponent
                         icon={<FileText />}
-                        title={"Historial de pagos"}
+                        title={"Payment history"}
                         columns={columns}
                         data={tableData}
                     />
