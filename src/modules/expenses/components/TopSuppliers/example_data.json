@@ -1,0 +1,31 @@
+{
+  "title": "Top 5 proveedores",
+  "period": "Año",
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "Seguridad Total Ltda.",
+      "amount": 22400000
+    },
+    {
+      "id": 2,
+      "name": "EPM",
+      "amount": 18950000
+    },
+    {
+      "id": 3,
+      "name": "Ascensores S.A.S.",
+      "amount": 14600000
+    },
+    {
+      "id": 4,
+      "name": "Limpieza Profesional",
+      "amount": 13200000
+    },
+    {
+      "id": 5,
+      "name": "Verde Vivo Jardines",
+      "amount": 8750000
+    }
+  ]
+}
