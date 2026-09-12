@@ -1,0 +1,66 @@
+.top-suppliers {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top-suppliers__title {
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.top-suppliers__period {
+  font-weight: 500;
+  color: #64748b;
+}
+
+.top-suppliers__list {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-suppliers__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.top-suppliers__name {
+  color: #334155;
+  min-width: 0;
+}
+
+.top-suppliers__amount {
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.top-suppliers__view-all {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.top-suppliers__view-all:hover {
+  text-decoration: underline;
+}
+
+.top-suppliers__view-all:active {
+  color: #1e40af;
+}
