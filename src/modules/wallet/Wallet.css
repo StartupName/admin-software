@@ -1,3 +1,19 @@
+.wallet {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.wallet .donutCard {
+  max-width: 420px;
+  width: 100%;
+  align-self: flex-start;
+}
+
 .wallet-table{
     min-height: 0;
     margin: 10px 24px;
