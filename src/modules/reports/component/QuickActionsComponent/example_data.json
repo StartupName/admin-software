@@ -1,0 +1,20 @@
+[
+  {
+    "id": "registrar-pago",
+    "title": "Registrar pago",
+    "icon": "DollarSign",
+    "color": "#22C55E"
+  },
+  {
+    "id": "registrar-gasto",
+    "title": "Registrar gastos",
+    "icon": "FileText",
+    "color": "#3B82F6"
+  },
+  {
+    "id": "apartamentos",
+    "title": "Apartamentos",
+    "icon": "Building2",
+    "color": "#8B5CF6"
+  }
+]
