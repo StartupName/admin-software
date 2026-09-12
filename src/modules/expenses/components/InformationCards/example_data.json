@@ -1,0 +1,34 @@
+{
+  "adminName": "Laura",
+  "showDatePicker": true,
+  "cards": [
+    {
+      "id": "gastos-mes",
+      "icon": "ShoppingCart",
+      "title": "Gastos del mes",
+      "value": "$ 18.240.000",
+      "circleColor": "#3B82F6"
+    },
+    {
+      "id": "gastos-pendientes",
+      "icon": "Wallet",
+      "title": "Gastos pendientes",
+      "value": "$ 4.120.000",
+      "circleColor": "#F59E0B"
+    },
+    {
+      "id": "gastos-mora",
+      "icon": "AlertTriangle",
+      "title": "Gastos en mora",
+      "value": "$ 1.870.000",
+      "circleColor": "#EF4444"
+    },
+    {
+      "id": "balance-mes",
+      "icon": "BarChart3",
+      "title": "Balance del mes",
+      "value": "$ 6.110.000",
+      "circleColor": "#8B5CF6"
+    }
+  ]
+}

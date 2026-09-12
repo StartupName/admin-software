@@ -1,4 +1,11 @@
+.expenses-content {
+    display: flex;
+    min-height: 0;
+    padding: 10px;
+}
+
 .expenses-table{
+    flex: 1;
     min-height: 0;
     margin: 10px 24px;
 }
