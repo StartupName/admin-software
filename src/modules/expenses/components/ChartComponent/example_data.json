@@ -1,0 +1,32 @@
+{
+  "title": "Distribución por categoría",
+  "subtitle": "Agosto 2024",
+  "totalLabel": "Total",
+  "categories": [
+    {
+      "name": "Servicios",
+      "value": 7880000,
+      "color": "#8B5CF6"
+    },
+    {
+      "name": "Mantenimiento",
+      "value": 4690000,
+      "color": "#F59E0B"
+    },
+    {
+      "name": "Servicios Públicos",
+      "value": 3460000,
+      "color": "#10B981"
+    },
+    {
+      "name": "Suministros",
+      "value": 1260000,
+      "color": "#F97316"
+    },
+    {
+      "name": "Seguros",
+      "value": 950000,
+      "color": "#EF4444"
+    }
+  ]
+}
