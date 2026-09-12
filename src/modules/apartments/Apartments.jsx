@@ -7,6 +7,7 @@ import {
 import './Apartments.css'
 import NavigationComponent from '../../common/components/NavigationComponent/NavigationComponent'
 import SummaryComponent from './components/SummaryComponent/SummaryComponent'
+import FiltersComponent from './components/FiltersComponent/FiltersComponent'
 import TableComponent from '../dashboard/components/TableComponent/TableComponent'
 import exampleData from './components/TableComponent/data/example_data.json'
 
@@ -105,14 +106,20 @@ function Apartments() {
 
   function handleDelete() {
     // Location: Apartments.jsx — handleDelete
-    // Purpose: reserved space for the future Delete action of the selected table record
-    // Implementation: add the Delete functionality for `selectedRecord` in this handler
+    // Purpose: reserved space for the future Edit action of the selected table record
+    // Implementation: add the Edit functionality for `selectedRecord` in this handler
     return
+  }
+
+  // TEMPORAL: la conexión real a la base de datos la hará integración.
+  function handleQuery(params) {
+    console.log('Consultar apartamentos con:', params)
   }
 
   return (
     <>
       <SummaryComponent values={[120, 78, 28, 14, 92]} />
+      <FiltersComponent onQuery={handleQuery} />
       <div className="apartments_table">
         <TableComponent
           icon={<Building2 />}

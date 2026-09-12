@@ -1,0 +1,41 @@
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-field__label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.filter-field__select {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.filter-field__select select {
+  appearance: none;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 32px 8px 12px;
+  font-size: 0.85rem;
+  background: #fff;
+  outline: none;
+  cursor: pointer;
+  min-width: 150px;
+}
+
+.filter-field__select select:focus {
+  border-color: #1d4ed8;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.15);
+}
+
+.filter-field__select svg {
+  position: absolute;
+  right: 10px;
+  color: #64748b;
+  pointer-events: none;
+}
