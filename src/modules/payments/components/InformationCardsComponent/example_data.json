@@ -1,29 +1,29 @@
 [
   {
-    "id": "recaudo",
+    "id": "collected",
     "icon": "DollarSign",
-    "title": "Recaudo del mes",
-    "value": "$ 24.350.000",
+    "title": "Month collected",
+    "value": "$ 24,350,000",
     "circleColor": "#10B981"
   },
   {
-    "id": "numero-pagos",
+    "id": "payments-count",
     "icon": "Calendar",
-    "title": "Número de pagos",
+    "title": "Number of payments",
     "value": "86",
     "circleColor": "#3B82F6"
   },
   {
-    "id": "pago-promedio",
+    "id": "average-payment",
     "icon": "CreditCard",
-    "title": "Pago promedio",
-    "value": "$ 283.140",
+    "title": "Average payment",
+    "value": "$ 283,140",
     "circleColor": "#8B5CF6"
   },
   {
-    "id": "ultimo-pago",
+    "id": "last-payment",
     "icon": "Clock",
-    "title": "Último pago registrado",
+    "title": "Last registered payment",
     "value": "23/08/2024",
     "circleColor": "#F59E0B"
   }

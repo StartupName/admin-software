@@ -1,25 +1,25 @@
 [
   {
     "id": 1,
-    "title": "Registrar pago",
+    "title": "Register payment",
     "icon": "FileText",
     "color": "#3B82F6"
   },
   {
     "id": 2,
-    "title": "Carga masiva de pagos",
+    "title": "Bulk payment upload",
     "icon": "Files",
     "color": "#3B82F6"
   },
   {
     "id": 3,
-    "title": "Generar comprobante",
+    "title": "Generate receipt",
     "icon": "FileCheck",
     "color": "#22C55E"
   },
   {
     "id": 4,
-    "title": "Recaudos del mes",
+    "title": "Month collections",
     "icon": "Wallet",
     "color": "#F59E0B"
   }
