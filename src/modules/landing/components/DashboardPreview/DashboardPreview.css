@@ -1,0 +1,32 @@
+.landing-preview { width: 570px; background: #fff; border: 2px solid #d1e3fc; border-radius: 19px; box-shadow: 0 18px 30px #164d9130; overflow: hidden; transform: perspective(1200px) rotateY(-9deg) rotateZ(-1deg); text-align: left; }
+.landing-preview-header { height: 59px; display: flex; align-items: center; justify-content: space-between; padding: 0 18px; border-bottom: 1px solid #eef4fb; }
+.landing-preview-header strong { display: flex; align-items: center; gap: 6px; font-size: 15px; }
+.landing-preview-user { display: flex; align-items: center; gap: 17px; color: #7086ad; }
+.landing-preview-user b { display: block; font-size: 8px; color: #142754; }
+.landing-preview-user small { display: block; font-size: 8px; }
+.landing-preview-avatar { background: #eed9bc; color: #583823; font-size: 10px; border-radius: 50%; padding: 8px 5px; margin-right: -10px; }
+.landing-preview-body { display: flex; min-height: 315px; }
+.landing-preview-sidebar { width: 132px; flex-shrink: 0; padding: 12px; }
+.landing-preview-sidebar > div { display: flex; align-items: center; gap: 9px; font-size: 9px; color: #4c628b; padding: 8px 5px; border-radius: 4px; }
+.landing-preview-sidebar .is-selected { color: #0068ff; background: #e7f2ff; }
+.landing-preview-content { flex: 1; padding: 17px 12px; background: linear-gradient(135deg, #f3f8ff, #fcfdff); min-width: 0; }
+.landing-preview-content h3 { font-size: 17px; margin-bottom: 5px; }
+.landing-preview-content > p { font-size: 9px; color: #4b5e87; }
+.landing-preview-stats { display: flex; gap: 10px; margin: 14px 0; }
+.landing-preview-stats > div { flex: 1; border: 5px solid white; border-radius: 9px; background: #eafaf2; padding: 8px 4px; color: #00a956; white-space: nowrap; }
+.landing-preview-stats > div:nth-child(2) { background: #fff2f4; color: #f02e40; }
+.landing-preview-stats > div:nth-child(3) { background: #f5f9fe; color: #081952; }
+.landing-preview-stats small { display: block; font-size: 8px; }
+.landing-preview-stats b { display: block; font-size: 14px; margin: 5px 0; }
+.landing-preview-bottom { display: grid; grid-template-columns: 1.8fr 1fr; gap: 15px; }
+.landing-preview-bottom h4 { font-size: 10px; margin-bottom: 12px; }
+.landing-preview-chart { padding: 12px; border-radius: 10px; background: #fff; }
+.landing-preview-bars { height: 108px; display: flex; align-items: flex-end; justify-content: space-around; }
+.landing-preview-bars > div { text-align: center; }
+.landing-preview-bars span { display: flex; align-items: flex-end; }
+.landing-preview-bars i { width: 7px; height: 85%; background: linear-gradient(#0875ff, #4595ff); }
+.landing-preview-bars i + i { height: 100%; background: #86bbff; }
+.landing-preview-bars small { display: block; margin-top: 6px; font-size: 8px; color: #6b7aa5; }
+.landing-preview-actions { padding-top: 10px; }
+.landing-preview-actions > div { display: flex; gap: 8px; align-items: center; font-size: 8px; background: #eef5ff; padding: 8px 5px; border-radius: 5px; margin-bottom: 4px; }
+.landing-preview-actions svg { color: #006aff; }
