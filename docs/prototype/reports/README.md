@@ -55,10 +55,7 @@ Data fetching, transformation, and integration will be handled in higher-level l
 
 ---
 
-# 4. Exclusions
-
-
-### Frequent Reports component
+# 4. Frequent Reports component
 ![Frequent Reports component](./frequent_reports.jpg)
 
 The information regarding this component will not be taken into account, although its design will be considered for a new implementation: In that space—but using the same format in which the image would appear—reports for each section created on this page will be displayed:
@@ -89,12 +86,18 @@ For further guidance on creating charts, you can refer to this link and use the 
 
 
 > [!NOTE]
-> Ten en cuenta que el gráfico debe tener el diseño visual correspondiente al que tiene en el prototipo.
-> Así mismo ten en cuenta que el gráfico debe tener lo datos correctos teniendo en cuenta su módulo.
+> Keep in mind that the graph must match the visual design of the one in the prototype.
+> Also, keep in mind that the graph must contain the correct data, taking its module into account.
 
 # 7. Additional filter and date component
 
 [Unnecessary Aditional Component](./additional_component.jpg)
 
 This component must be removed and will not be part of the page's normal flow.
+
+# 8. Table component
+
+For this component, simply keep in mind the limitation that the logos generated at the beginning of each row are not currently included and will not be recreated.
+
+However, you can see a logo in the "Format" column identifying the file as PDF or Excel; in this case, the system must read a field named `format` from `example_data` (which must specify "pdf" or "excel" in lowercase) and then use a renderer to display the appropriate logo.
 
