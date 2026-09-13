@@ -1,0 +1,6 @@
+[
+  { "name": "Reporte apartamentos", "value": 12, "color": "#2563eb" },
+  { "name": "Reporte gastos", "value": 18, "color": "#22c55e" },
+  { "name": "Reporte pagos", "value": 15, "color": "#eab308" },
+  { "name": "Cartera por cobrar", "value": 9, "color": "#ef4444" }
+]
