@@ -1,0 +1,67 @@
+.reports-container {
+  padding: 10px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+.reports-container h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.reports-table {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  min-height: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.reports-table > .table-component {
+  flex: 2 1 0;
+  min-width: 0;
+  margin: 0;
+}
+
+.reports-table > .donutCard {
+  flex: 1 1 320px;
+  max-width: 380px;
+  min-width: 0;
+}
+
+.reports-format {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.reports-format--pdf {
+  background: #fdecec;
+  color: #c0392b;
+}
+
+.reports-format--excel {
+  background: #e7f6ec;
+  color: #1a8245;
+}
+
+@media (max-width: 1024px) {
+  .reports-table {
+    flex-direction: column;
+  }
+
+  .reports-table > .donutCard {
+    max-width: 100%;
+    width: 100%;
+  }
+}
